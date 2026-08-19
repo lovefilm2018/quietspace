@@ -10,7 +10,7 @@ export default defineConfig({
       "@": path.resolve(__dirname, "./src"),
     },
   },
-  base: process.env.BASE_URL || "./",
+  base: process.env.NODE_ENV === "production" ? "/quietspace/" : "/",
   build: {
     outDir: "dist",
     emptyOutDir: true,

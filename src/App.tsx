@@ -3,7 +3,6 @@ import { Toaster } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import NotFound from "@/pages/NotFound";
 import { Route, Switch, Router } from "wouter";
-import { useHashLocation } from "wouter/use-hash-location";
 import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import About from "./pages/About";
@@ -11,6 +10,9 @@ import Contact from "./pages/Contact";
 import Gallery from "./pages/Gallery";
 import Home from "./pages/Home";
 import Services from "./pages/Services";
+
+const rawBase = import.meta.env.BASE_URL || "/";
+const basePath = rawBase === "./" ? "" : rawBase.replace(/\/$/, "");
 
 function PageRoutes() {
   return (
@@ -32,7 +34,9 @@ export default function App() {
       <ThemeProvider defaultTheme="light">
         <TooltipProvider>
           <Toaster />
-          <PageRoutes />
+          <Router base={basePath}>
+            <PageRoutes />
+          </Router>
         </TooltipProvider>
       </ThemeProvider>
     </ErrorBoundary>
