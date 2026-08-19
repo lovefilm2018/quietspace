@@ -83,7 +83,8 @@
 
 ## 7. Operational Status & Roadmap (August 2026)
 - [x] **Project Inception & Domain Selection:** Agreed on `QuietSpace.org.uk`, initial client briefing completed with Magda.
-- [ ] **Phase 1: Project Scaffolding:** Initialize Vite + React + TypeScript + Tailwind workspace.
-- [ ] **Phase 2: Photo Ingestion & Asset Selection:** Review Magda's before/after photos and founder portrait.
-- [ ] **Phase 3: Core UI Development:** Build responsive Home, Services, About, Gallery, and Contact pages.
-- [ ] **Phase 4: Google Business Profile & Domain Linking:** Register domain, link DNS, and verify GBP.
+- [x] **Phase 1: Project Scaffolding & Cleanup:** Processed Manus starter package into a clean root Vite + React 19 + TypeScript + Tailwind workspace with zero proprietary dependencies.
+- [x] **Phase 2: Asset Ingestion:** Ingested all 10 photography and branding assets into `public/images/` with flexible `assetUrl` base resolution.
+- [x] **Phase 3: Core UI Development & Routing:** Built responsive Home, About, Services, Gallery, and dedicated Contact pages with Magda's canonical contact (`mada_7017@yahoo.com`), Worthing/Sussex regional coverage, and GitHub Pages SPA 404 redirection.
+- [x] **Phase 4: GitHub Repository & Automated CI/CD:** Initialized repo at `https://github.com/lovefilm2018/quietspace.git` and configured GitHub Actions `.github/workflows/deploy.yml` for automated GitHub Pages builds on push to `main`.
+- [ ] **Phase 5: Google Business Profile & Domain Linking:** Register domain `QuietSpace.org.uk`, link DNS, and verify GBP.
