@@ -4,7 +4,7 @@ import { useState } from "react";
 import { Link, useLocation } from "wouter";
 import { assetUrl } from "@/lib/assets";
 
-const logoUrl = assetUrl("images/quiet-space-supplied-logo.webp");
+const logoUrl = assetUrl("images/quiet-space-horizontal-logo.png");
 const iconUrl = assetUrl("images/quiet-space-icon.png");
 
 const navigation = [
