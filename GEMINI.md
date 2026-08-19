@@ -87,4 +87,6 @@
 - [x] **Phase 2: Asset Ingestion:** Ingested all 10 photography and branding assets into `public/images/` with flexible `assetUrl` base resolution.
 - [x] **Phase 3: Core UI Development & Routing:** Built responsive Home, About, Services, Gallery, and dedicated Contact pages with Magda's canonical contact (`mada_7017@yahoo.com`), Worthing/Sussex regional coverage, and GitHub Pages SPA 404 redirection.
 - [x] **Phase 4: GitHub Repository & Automated CI/CD:** Initialized repo at `https://github.com/lovefilm2018/quietspace.git` and configured GitHub Actions `.github/workflows/deploy.yml` for automated GitHub Pages builds on push to `main`.
-- [ ] **Phase 5: Google Business Profile & Domain Linking:** Register domain `QuietSpace.org.uk`, link DNS, and verify GBP.
+- [x] **Phase 5: Logo Enhancement & Brand Typography:** Isolated high-res transparent logo artwork (zero speckles), created horizontal lockup with 100% full-width bold tagline (*"HOME ORGANISING & DECLUTTERING"*), and deployed responsive header sizing across desktop, tablet, and mobile.
+- [ ] **Phase 6: Google Business Profile & Domain Linking:** Register domain `QuietSpace.org.uk`, link custom DNS to GitHub Pages, and verify GBP.
+- [ ] **Phase 7: Client Review with Magda:** Walkthrough of live staging site, collect additional client project photography, and calibrate copy packages.
