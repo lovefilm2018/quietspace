@@ -34,6 +34,29 @@ function NavLinks({ onNavigate }: { onNavigate?: () => void }) {
   );
 }
 
+function MobileTabBar() {
+  const [location] = useLocation();
+
+  return (
+    <nav aria-label="Mobile page navigation" className="mobile-page-strip md:hidden">
+      <div className="mobile-page-strip-inner">
+        {navigation.map((item) => {
+          const isActive = location === item.href;
+          return (
+            <Link
+              key={item.href}
+              href={item.href}
+              className={`mobile-tab-item ${isActive ? "mobile-tab-item-active" : ""}`}
+            >
+              {item.label}
+            </Link>
+          );
+        })}
+      </div>
+    </nav>
+  );
+}
+
 export function SiteHeader() {
   const [open, setOpen] = useState(false);
 
@@ -48,27 +71,38 @@ export function SiteHeader() {
           <NavLinks />
         </div>
 
-        <Link href="/contact" className="header-cta hidden sm:inline-flex">
-          Book Consultation <ArrowUpRight size={15} strokeWidth={1.8} />
-        </Link>
+        <div className="flex items-center gap-2.5">
+          <Link href="/contact" className="header-cta hidden sm:inline-flex">
+            Book Consultation <ArrowUpRight size={15} strokeWidth={1.8} />
+          </Link>
 
-        <button
-          type="button"
-          className="mobile-menu-button md:hidden"
-          onClick={() => setOpen((value) => !value)}
-          aria-label={open ? "Close navigation" : "Open navigation"}
-          aria-expanded={open}
-        >
-          {open ? <X size={22} /> : <Menu size={23} />}
-        </button>
+          <button
+            type="button"
+            className="mobile-menu-button md:hidden"
+            onClick={() => setOpen((value) => !value)}
+            aria-label={open ? "Close navigation" : "Open navigation"}
+            aria-expanded={open}
+          >
+            {open ? <X size={22} /> : <Menu size={22} />}
+          </button>
+        </div>
       </div>
+
+      {/* Persistent horizontal page strip on mobile for immediate visual page access */}
+      <MobileTabBar />
 
       {open && (
         <div className="mobile-nav md:hidden">
           <NavLinks onNavigate={() => setOpen(false)} />
-          <Link href="/contact" onClick={() => setOpen(false)} className="header-cta mt-5 inline-flex w-fit">
+          <Link href="/contact" onClick={() => setOpen(false)} className="header-cta mt-5 inline-flex w-full justify-center">
             Book Consultation <ArrowUpRight size={15} strokeWidth={1.8} />
           </Link>
+          <div className="mobile-nav-footer mt-4 pt-3 border-t border-[rgba(45,98,100,0.15)] flex flex-col gap-1.5 text-xs text-[#597171]">
+            <span className="font-semibold text-[#244d4f]">Worthing &amp; Sussex, UK</span>
+            <a href="mailto:mada_7017@yahoo.com" className="text-[#2d6264] flex items-center gap-1.5 hover:underline">
+              <Mail size={13} /> mada_7017@yahoo.com
+            </a>
+          </div>
         </div>
       )}
     </header>
