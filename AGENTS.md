@@ -56,13 +56,23 @@ This project operates on a structured **Human-AI Partnership**:
 - **Requirement:** Append operational metrics instantly in <0.1s using: `python "C:\Users\TotalBiz\Documents\AI_Usage_Audit\log_task.py" <ProjectName> "<Task Summary>"`
 
 ### 11. Central Google Drive & Google Docs Workspace Integration Protocol
-- **Rule:** When accessing, parsing, generating, or formatting project documentation, client intake notes, or consultation forms in Google Drive/Docs:
+- **Rule:** When accessing, parsing, generating, or formatting project documentation, client intake notes, or consultation forms:
 - **Requirement:**
   - **Service Account Identity:** `agy-search-console-agent@totalbiz-marketing-automation.iam.gserviceaccount.com` (GCP Project: `totalbiz-marketing-automation`, Project ID: `682815206557`).
   - **Credential Path:** `C:\Users\TotalBiz\Downloads\totalbiz-marketing-automation-2b864bf28d36.json` (mirrored in `Documents/totalbizsupport/gsc-key.json` and seedbox `/storage/services/telegram_gateway/service_account.json`).
   - **Permissions & Access:** Master `TotalBiz` Google Drive folder (owned by `totalbizsupport@gmail.com`) is shared directly with full **Editor** permissions, inherited by `QuietSpace` and all project subfolders.
-  - **Client Library:** Utilize `googleapiclient.discovery.build('drive', 'v3', ...)` and `build('docs', 'v1', ...)` with `google.oauth2.service_account.Credentials`.
+  - **Client Library:** Utilize `googleapiclient.discovery.build('drive', 'v3', ...)` and `build('docs', 'v1', ...)` with `google.oauth2.service_account.Credentials` to read/write therapy service agreements, GDPR compliance forms, and client schedules.
 
+### 12. Universal Gmail Intelligence & Email Assistant Protocol:
+- **Rule:** When the user asks to check client emails, search correspondence history (therapy clients, enquiries, room bookings), summarize email threads, or draft responses:
+- **Requirement:**
+  - **Tool Location:** `python tools/gmail_inbox.py`.
+  - **Commands:**
+    - Search all mail: `python tools/gmail_inbox.py search "<query>" [--count N]`
+    - Read complete conversation thread: `python tools/gmail_inbox.py thread <thread_id>`
+    - Read single message: `python tools/gmail_inbox.py read <message_id>`
+    - Create threaded draft reply: `python tools/gmail_inbox.py reply <message_id> "<reply_body>"`
+  - **Safety Standard:** The tool strictly creates drafts in `totalbizsupport@gmail.com` **Drafts** folder; it NEVER auto-sends without Alex's review.
 
 ---
 

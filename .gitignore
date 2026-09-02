@@ -8,3 +8,5 @@ dist/
 quiet-space-package/
 .manus/
 .manus-logs/
+credentials.json
+token.json
