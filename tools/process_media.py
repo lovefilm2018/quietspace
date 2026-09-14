@@ -7,9 +7,9 @@ def main():
     os.makedirs("public/images", exist_ok=True)
     os.makedirs("public/videos", exist_ok=True)
 
-    # 1. Process Magda Bio portrait (from Media/magda2.png)
+    # 1. Process Magda Bio portrait (from Media/magda1.png)
     print("Processing Magda portrait...")
-    im_magda = Image.open("Media/magda2.png").convert("RGB")
+    im_magda = Image.open("Media/magda1.png").convert("RGB")
     w, h = im_magda.size
     target_w = 900
     target_h = int(h * (target_w / w))
