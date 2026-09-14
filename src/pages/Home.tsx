@@ -6,6 +6,7 @@ import { assetUrl } from "@/lib/assets";
 
 const heroUrl = assetUrl("images/quiet-space-hero.jpg");
 const processUrl = assetUrl("images/quiet-space-process.jpg");
+const magdaBioUrl = assetUrl("images/magda-bio.webp");
 const kitchenUrl = assetUrl("images/quiet-space-gallery-kitchen.jpg");
 const livingUrl = assetUrl("images/quiet-space-gallery-living.jpg");
 
@@ -82,7 +83,7 @@ export default function Home() {
       </section>
 
       <section className="story-section">
-        <div className="story-image-wrap"><img src={processUrl} alt="Thoughtfully arranged linen and wardrobe storage" className="story-image" /></div>
+        <div className="story-image-wrap"><img src={magdaBioUrl} alt="Magdalena, founder of Quiet Space" className="story-image" style={{ objectPosition: "center 20%" }} /></div>
         <div className="story-copy">
           <p className="eyebrow"><span /> Made for real life</p>
           <h2>There is no right way to live at home.</h2>

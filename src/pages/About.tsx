@@ -4,7 +4,7 @@ import { Link } from "wouter";
 import { SiteShell } from "@/components/SiteShell";
 import { assetUrl } from "@/lib/assets";
 
-const processUrl = assetUrl("images/quiet-space-process.jpg");
+const magdaBioUrl = assetUrl("images/magda-bio.webp");
 
 const principles = [
   "No judgement, no pressure, no one-size-fits-all plan.",
@@ -25,8 +25,8 @@ export default function About() {
 
       <section className="about-intro section-wrap">
         <div className="about-intro-visual">
-          <img src={processUrl} alt="A carefully organised wardrobe in calm natural tones" />
-          <div className="visual-note"><Leaf size={17} /> Empathetic, never clinical</div>
+          <img src={magdaBioUrl} alt="Magdalena, founder and specialist at Quiet Space" style={{ objectPosition: "center 20%" }} />
+          <div className="visual-note"><Leaf size={17} /> Magdalena — Founder & Specialist</div>
         </div>
         <div className="about-intro-copy">
           <p className="eyebrow"><span /> Magdalena’s Approach</p>

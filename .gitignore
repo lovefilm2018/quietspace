@@ -10,3 +10,4 @@ quiet-space-package/
 .manus-logs/
 credentials.json
 token.json
+*.bat
