@@ -7,16 +7,37 @@ def main():
     os.makedirs("public/images", exist_ok=True)
     os.makedirs("public/videos", exist_ok=True)
 
-    # 1. Process Magda Bio portrait (from Media/magda1.png)
-    print("Processing Magda portrait...")
+    # 1. Process Magda Bio portrait (from Media/magda1.png) with subtle Quiet Space warmth
+    print("Processing & color-grading Magda portrait...")
     im_magda = Image.open("Media/magda1.png").convert("RGB")
-    w, h = im_magda.size
+    arr_magda = np.array(im_magda, dtype=np.float32) / 255.0
+
+    # Warm linen highlight tint (#FDFBF7 / #F8F6F0)
+    hl_mask = np.clip((arr_magda - 0.5) / 0.5, 0, 1)
+    arr_magda[:, :, 0] += hl_mask[:, :, 0] * 0.025
+    arr_magda[:, :, 1] += hl_mask[:, :, 1] * 0.015
+    arr_magda[:, :, 2] -= hl_mask[:, :, 2] * 0.015
+
+    # Gentle ambient shadow lift (slate/sage #2C332D / #7D8C7A)
+    sh_mask = np.clip((0.5 - arr_magda) / 0.5, 0, 1)
+    arr_magda[:, :, 0] += sh_mask[:, :, 0] * 0.010
+    arr_magda[:, :, 1] += sh_mask[:, :, 1] * 0.018
+    arr_magda[:, :, 2] += sh_mask[:, :, 2] * 0.012
+
+    arr_magda = np.clip(arr_magda, 0.0, 1.0)
+    im_magda_graded = Image.fromarray((arr_magda * 255.0).astype(np.uint8))
+
+    # Natural skin tone balance and soft contrast curve
+    im_magda_graded = ImageEnhance.Color(im_magda_graded).enhance(0.94)
+    im_magda_graded = ImageEnhance.Contrast(im_magda_graded).enhance(0.97)
+
+    w, h = im_magda_graded.size
     target_w = 900
     target_h = int(h * (target_w / w))
-    im_magda_resized = im_magda.resize((target_w, target_h), Image.Resampling.LANCZOS)
-    im_magda_resized.save("public/images/magda-bio.webp", "WEBP", quality=90)
-    im_magda_resized.save("public/images/magda-bio.jpg", "JPEG", quality=90)
-    print("Saved public/images/magda-bio.webp")
+    im_magda_resized = im_magda_graded.resize((target_w, target_h), Image.Resampling.LANCZOS)
+    im_magda_resized.save("public/images/magda-bio.webp", "WEBP", quality=92)
+    im_magda_resized.save("public/images/magda-bio.jpg", "JPEG", quality=92)
+    print("Saved public/images/magda-bio.webp (color-graded)")
 
     # 2. Process Client Photos with Quiet Space Brand Color Grading
     print("Grading client photos...")
