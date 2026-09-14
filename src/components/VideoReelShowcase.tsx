@@ -18,7 +18,7 @@ const scenes: VideoScene[] = [
     subtitle: "Sussex Home Transformation",
     description: "A continuous flow across divided cutlery, designated utensil storage, and balanced servingware.",
     videoSrc: assetUrl("videos/quiet-space-reel.mp4"),
-    tag: "Continuous Loop",
+    tag: "",
   },
   {
     id: "cutlery",
@@ -144,25 +144,27 @@ export function VideoReelShowcase() {
           />
 
           {/* Top Scene Tag */}
-          <div
-            style={{
-              position: "absolute",
-              top: "16px",
-              left: "16px",
-              background: "rgba(248, 246, 240, 0.92)",
-              backdropFilter: "blur(6px)",
-              color: "#244d4f",
-              fontSize: "10px",
-              fontWeight: 700,
-              letterSpacing: "0.14em",
-              textTransform: "uppercase",
-              padding: "5px 12px",
-              borderRadius: "3px",
-              border: "1px solid rgba(45,98,100,0.2)",
-            }}
-          >
-            {activeScene.tag}
-          </div>
+          {activeScene.tag ? (
+            <div
+              style={{
+                position: "absolute",
+                top: "16px",
+                left: "16px",
+                background: "rgba(248, 246, 240, 0.92)",
+                backdropFilter: "blur(6px)",
+                color: "#244d4f",
+                fontSize: "10px",
+                fontWeight: 700,
+                letterSpacing: "0.14em",
+                textTransform: "uppercase",
+                padding: "5px 12px",
+                borderRadius: "3px",
+                border: "1px solid rgba(45,98,100,0.2)",
+              }}
+            >
+              {activeScene.tag}
+            </div>
+          ) : null}
 
           {/* Bottom Controls & Info */}
           <div
