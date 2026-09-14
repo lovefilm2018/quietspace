@@ -92,12 +92,12 @@
 - [x] **Phase 5: Logo Enhancement & Brand Typography:** Isolated high-res transparent logo artwork (zero speckles), created horizontal lockup with 100% full-width bold tagline (*"HOME ORGANISING & DECLUTTERING"*), and deployed responsive header sizing across desktop, tablet, and mobile.
 - [x] **Phase 6: Mobile Web & Portrait Navigation Optimization:** Deployed sticky header with persistent horizontal mobile page tab bar (`Home`, `About`, `Services`, `Gallery`, `Contact`), active route highlighting, and touch-optimized navigation across portrait/landscape orientations.
 - [x] **Phase 7: Authentic Client Media & Video Reel Ingestion:**
-  - Ingested Magda's bio portrait (`magda-bio.webp`), styled with facial-focus framing (`object-position: center 20%`), and integrated into the About page (`/about`) and Home page story section (`/`).
-  - Automated color-grading pipeline (`tools/process_media.py`) applying the Quiet Space Japandi palette (`#f8f6f0` linen highlight, `#244d4f` slate shadow, muted saturation) to Sussex kitchen photos (`quiet-space-real-crockery.webp`, `quiet-space-real-glassware.webp`).
+  - Ingested and color-graded Magda's preferred bio portrait (`Media/magda1.png` -> `magda-bio.webp`), styled with facial-focus framing (`object-position: center 20%`), warm linen highlight lift, and slate-sage ambient shadow balancing across the About and Home pages.
+  - Automated color-grading pipeline (`tools/process_media.py`) applying the Quiet Space Japandi palette (`#f8f6f0` linen highlight, `#244d4f` slate shadow, muted saturation) to Sussex kitchen photos (`quiet-space-real-crockery.webp`, `quiet-space-real-glassware.webp`) and bio photography.
   - Encoded 3 vertical kitchen transformation videos and a unified 12s highlight reel (`public/videos/quiet-space-reel.mp4`).
   - Built and deployed interactive [`VideoReelShowcase.tsx`](file:///C:/Users/TotalBiz/Documents/QuietSpace/src/components/VideoReelShowcase.tsx) component to the Gallery page (`/gallery`) with seamless looping and tabbed scene navigation.
 - [ ] **Phase 8: Google Business Profile & Domain Linking:** Register domain `QuietSpace.org.uk`, link custom DNS to GitHub Pages, and verify GBP.
-- [ ] **Phase 9: Client Review with Magda:** Walkthrough of live staging site, collect additional client project photography, and calibrate copy packages.
+- [x] **Phase 9: Client Review with Magda:** Staging site and media updates dispatched to Magda for feedback, photography review, and copy calibration.
 
 ---
 
