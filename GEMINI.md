@@ -3,17 +3,18 @@
 
 
 ## 1. Project Overview & Business Identity
-- **Business Name:** Quiet Space (Home Organising & Decluttering)
-- **Tagline:** *"Creating calm, functional, and aesthetically pleasing homes."*
+- **Business Name:** Quiet Space (Home Organising, Decluttering & Property Staging)
+- **Tagline:** *"Bring peace and beauty to your home and enjoy living in it."*
 - **Founder & Specialist:** Magdalena ("Magda")
-- **Client Contact Email:** `mada_7017@yahoo.com`
-- **Location & Reach:** Based in Worthing, West Sussex — serving Worthing, Brighton, Chichester, and across East & West Sussex.
-- **Primary Domain:** `QuietSpace.org.uk` (Alternative local domains: `QuietSpaceWorthing.co.uk`, `QuietSpaceSussex.co.uk`)
-- **Core Value Proposition:** Helping busy individuals, families, and property owners transform cluttered, overwhelming spaces into serene, orderly, and sustainable environments. High aesthetic standard, zero judgement, empathetic and hands-on approach.
+- **Client Contact Email:** `mada_7017@yahoo.com` (Custom domain Google Workspace active; email aliases in selection)
+- **Location & Reach:** Based in Chichester, West Sussex — serving West Sussex (Chichester, Worthing, Arundel, Bognor Regis, Littlehampton, Midhurst), Hampshire (Portsmouth, Southsea, Emsworth, Havant, Petersfield, Fareham), and South Surrey. UK-wide travel upon arrangement.
+- **Primary Domain:** `QuietSpace.org.uk` (Also `QuietSpaceWorthing.co.uk`, `QuietSpaceSussex.co.uk`)
+- **Staging / Fallback URL:** `https://lovefilm2018.github.io/quietspace/`
+- **Core Value Proposition:** Helping busy individuals, families, and property owners transform cluttered, overwhelming spaces into serene, orderly, and sustainable environments. High aesthetic standard, zero judgement, empathetic and hands-on approach. High standards of cleanliness, reliability, and NHS-trained discretion.
 
 ---
 
-## 2. Core Service Offerings
+## 2. Core Service Offerings & Pricing Architecture
 1. **Full-Room Decluttering & Reorganisation:**
    - Kitchens, pantries, wardrobes, playrooms, living rooms, and home offices.
    - Categorisation, sorting, donation coordination, and tailored storage solutions.
@@ -23,6 +24,14 @@
    - Gentle, structured decluttering for house moves, renovations, or life stage changes.
 4. **Maintenance & Seasonal Refreshes:**
    - Scheduled tune-ups to keep systems functioning seamlessly.
+5. **Property Staging (Rental & Sale Preparation):**
+   - Surface decluttering, property styling using existing items, and photo-ready staging for estate agents, Airbnb, and rentals.
+6. **Transparent Sessions & Pricing Model:**
+   - **Short Session (3–5 Hours):** £135 – £225 (Targeted refresh: pantry, single wardrobe, linen closet, desk).
+   - **Full Day Session (6–10 Hours):** £260 – £450 (Large rooms, whole kitchen, deep sort, complete overhaul).
+   - **Property Staging:** From £160 – £450+ (hours-based).
+   - **In-Person Assessment / Consultation:** £50 (deducted from invoice upon service booking; free photo/video review).
+   - **Travel Policy:** Free within 15 miles of Chichester; 45p per mile thereafter. Nationwide available.
 
 ---
 
@@ -96,8 +105,17 @@
   - Automated color-grading pipeline (`tools/process_media.py`) applying the Quiet Space Japandi palette (`#f8f6f0` linen highlight, `#244d4f` slate shadow, muted saturation) to Sussex kitchen photos (`quiet-space-real-crockery.webp`, `quiet-space-real-glassware.webp`) and bio photography.
   - Encoded 3 vertical kitchen transformation videos and a unified 12s highlight reel (`public/videos/quiet-space-reel.mp4`).
   - Built and deployed interactive [`VideoReelShowcase.tsx`](file:///C:/Users/TotalBiz/Documents/QuietSpace/src/components/VideoReelShowcase.tsx) component to the Gallery page (`/gallery`) with seamless looping and tabbed scene navigation.
-- [ ] **Phase 8: Google Business Profile & Domain Linking:** Register domain `QuietSpace.org.uk`, link custom DNS to GitHub Pages, and verify GBP.
-- [x] **Phase 9: Client Review with Magda:** Staging site and media updates dispatched to Magda for feedback, photography review, and copy calibration.
+- [x] **Phase 8: Client Feedback Calibration & Pricing Integration:**
+  - Pivoted base location to **Chichester, West Sussex** with regional footprint across West Sussex, Hampshire & South Surrey.
+  - Ingested Magda's NHS St Richard’s Hospital background, 10-year experience across boutique hotels/private homes, and tagline (*"Bring peace and beauty to your home and enjoy living in it"*).
+  - Built and deployed Property Staging service line and transparent Sessions & Pricing cards (£135–£225 short, £260–£450 full day, £160–£450+ staging, £50 consultation credit, 15mi free travel policy).
+- [x] **Phase 9: Domain Verification & Google Workspace Provisioning:**
+  - Client enrolled in Google Workspace for `QuietSpace.org.uk`.
+  - DNS TXT record verified with Google; MX records migrated to Google Workspace Gmail.
+  - Client currently selecting professional email aliases (e.g. `magda@quietspace.org.uk` or `hello@quietspace.org.uk`).
+- [ ] **Phase 10: Google Business Profile (GBP) & Production Domain Cutover:**
+  - Link GitHub Pages custom domain / Cloudflare DNS to `QuietSpace.org.uk`.
+  - Claim and verify Google Business Profile for Quiet Space in Chichester & West Sussex.
 
 ---
 
