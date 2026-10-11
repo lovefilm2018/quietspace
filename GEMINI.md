@@ -8,7 +8,7 @@
 - **Founder & Specialist:** Magdalena ("Magda")
 - **Client Contact Email:** `mada_7017@yahoo.com` (Custom domain Google Workspace active; email aliases in selection)
 - **Location & Reach:** Based in Chichester, West Sussex — serving West Sussex (Chichester, Worthing, Arundel, Bognor Regis, Littlehampton, Midhurst), Hampshire (Portsmouth, Southsea, Emsworth, Havant, Petersfield, Fareham), and South Surrey. UK-wide travel upon arrangement.
-- **Primary Domain:** `QuietSpace.org.uk` (Also `QuietSpaceWorthing.co.uk`, `QuietSpaceSussex.co.uk`)
+- **Primary Domain:** `yourquietspace.co.uk`
 - **Staging / Fallback URL:** `https://lovefilm2018.github.io/quietspace/`
 - **Core Value Proposition:** Helping busy individuals, families, and property owners transform cluttered, overwhelming spaces into serene, orderly, and sustainable environments. High aesthetic standard, zero judgement, empathetic and hands-on approach. High standards of cleanliness, reliability, and NHS-trained discretion.
 
@@ -93,7 +93,7 @@
 ---
 
 ## 7. Operational Status & Roadmap (August 2026)
-- [x] **Project Inception & Domain Selection:** Agreed on `QuietSpace.org.uk`, initial client briefing completed with Magda.
+- [x] **Project Inception & Domain Selection:** Registered `yourquietspace.co.uk`, initial client briefing completed with Magda.
 - [x] **Phase 1: Project Scaffolding & Cleanup:** Processed Manus starter package into a clean root Vite + React 19 + TypeScript + Tailwind workspace with zero proprietary dependencies.
 - [x] **Phase 2: Asset Ingestion:** Ingested all 10 photography and branding assets into `public/images/` with flexible `assetUrl` base resolution.
 - [x] **Phase 3: Core UI Development & Routing:** Built responsive Home, About, Services, Gallery, and dedicated Contact pages with Magda's canonical contact (`mada_7017@yahoo.com`), Worthing/Sussex regional coverage, and GitHub Pages SPA 404 redirection.
@@ -110,11 +110,11 @@
   - Ingested Magda's NHS St Richard’s Hospital background, 10-year experience across boutique hotels/private homes, and tagline (*"Bring peace and beauty to your home and enjoy living in it"*).
   - Built and deployed Property Staging service line and transparent Sessions & Pricing cards (£135–£225 short, £260–£450 full day, £160–£450+ staging, £50 consultation credit, 15mi free travel policy).
 - [x] **Phase 9: Domain Verification & Google Workspace Provisioning:**
-  - Client enrolled in Google Workspace for `QuietSpace.org.uk`.
+  - Client enrolled in Google Workspace for `yourquietspace.co.uk`.
   - DNS TXT record verified with Google; MX records migrated to Google Workspace Gmail.
-  - Client currently selecting professional email aliases (e.g. `magda@quietspace.org.uk` or `hello@quietspace.org.uk`).
+  - Client currently selecting professional email aliases (e.g. `magda@yourquietspace.co.uk` or `hello@yourquietspace.co.uk`).
 - [ ] **Phase 10: Google Business Profile (GBP) & Production Domain Cutover:**
-  - Link GitHub Pages custom domain / Cloudflare DNS to `QuietSpace.org.uk`.
+  - Link GitHub Pages custom domain / Cloudflare DNS to `yourquietspace.co.uk`.
   - Claim and verify Google Business Profile for Quiet Space in Chichester & West Sussex.
 
 ---

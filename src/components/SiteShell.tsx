@@ -133,7 +133,7 @@ export function SiteFooter() {
         </div>
       </div>
       <div className="footer-bottom">
-        <span>© {new Date().getFullYear()} Quiet Space (QuietSpace.org.uk)</span>
+        <span>© {new Date().getFullYear()} Quiet Space (yourquietspace.co.uk)</span>
         <span>Bring peace and beauty to your home and enjoy living in it.</span>
       </div>
     </footer>
