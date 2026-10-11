@@ -9,16 +9,16 @@ const magdaBioUrl = assetUrl("images/magda-bio.webp");
 const principles = [
   "No judgement, no pressure, no one-size-fits-all plan.",
   "Practical, enduring systems built around your real routines.",
-  "Thoughtful, empathetic decisions that make room for what matters.",
-  "Rooted in Worthing, serving homes across East and West Sussex.",
+  "High standards of cleanliness, reliability, and NHS-trained discretion.",
+  "Based in Chichester, serving West Sussex, Hampshire & South Surrey.",
 ];
 
 export default function About() {
   return (
     <SiteShell>
       <section className="page-hero about-hero">
-        <p className="eyebrow"><span /> About Magdalena & Quiet Space</p>
-        <h1>More room for your <em>real</em> life.</h1>
+        <p className="eyebrow"><span /> About Magdalena &amp; Quiet Space</p>
+        <h1>Bring peace and beauty to your home and <em>enjoy living in it.</em></h1>
         <p className="page-hero-lead">Quiet Space was founded by Magdalena ("Magda") around a simple belief: a well-organised home should make everyday life feel lighter, calmer, and more joyful.</p>
         <div className="page-hero-scroll">A quieter rhythm begins here <span>↓</span></div>
       </section>
@@ -26,13 +26,20 @@ export default function About() {
       <section className="about-intro section-wrap">
         <div className="about-intro-visual">
           <img src={magdaBioUrl} alt="Magdalena, founder and specialist at Quiet Space" style={{ objectPosition: "center 20%" }} />
-          <div className="visual-note"><Leaf size={17} /> Magdalena — Founder & Specialist</div>
+          <div className="visual-note"><Leaf size={17} /> Magdalena — Professional Organiser &amp; Stylist</div>
         </div>
         <div className="about-intro-copy">
-          <p className="eyebrow"><span /> Magdalena’s Approach</p>
-          <h2>Organisation is not about owning less for the sake of it.</h2>
-          <p>It is about giving your belongings, your time, and your attention a more considered place to land. Whether your home feels crowded, in transition, or simply ready for a seasonal reset, Quiet Space meets you exactly where you are.</p>
-          <p>Based in Worthing and working throughout Sussex (including Brighton, Hove, Chichester, and surrounding towns), Magda works side-by-side with you to bring order, aesthetic balance, and functional flow into every space.</p>
+          <p className="eyebrow"><span /> Magdalena’s Journey &amp; Approach</p>
+          <h2>Organisation has always come naturally to me, and I genuinely enjoy it.</h2>
+          <p>
+            For the past 10 years, I have worked across boutique hotels, holiday homes, corporate offices, and private residences. This experience has given me the opportunity to see many different spaces, understand varied interior styles, and continuously learn what truly works in everyday life—and what doesn’t.
+          </p>
+          <p>
+            I also work at <strong>St Richard’s Hospital</strong> within the <strong>NHS</strong> in Chichester, where I have developed rigorous standards of cleanliness, meticulous attention to detail, dependability, and absolute discretion.
+          </p>
+          <p>
+            Based in Chichester, I travel regularly to clients across West Sussex (including Worthing, Chichester, Arundel, Bognor Regis, Littlehampton, and Midhurst), Hampshire (Portsmouth, Southsea, Emsworth, Havant, Petersfield), and South Surrey.
+          </p>
         </div>
       </section>
 
@@ -59,7 +66,7 @@ export default function About() {
 
       <section className="page-cta section-wrap">
         <div><p className="eyebrow"><span /> A considered next step</p><h2>Ready to create your quiet space?</h2></div>
-        <Link href="/contact" className="button-primary">Book a free consultation <ArrowUpRight size={17} /></Link>
+        <Link href="/contact" className="button-primary">Book a consultation <ArrowUpRight size={17} /></Link>
       </section>
     </SiteShell>
   );

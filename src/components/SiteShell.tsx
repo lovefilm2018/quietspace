@@ -98,7 +98,7 @@ export function SiteHeader() {
             Book Consultation <ArrowUpRight size={15} strokeWidth={1.8} />
           </Link>
           <div className="mobile-nav-footer mt-4 pt-3 border-t border-[rgba(45,98,100,0.15)] flex flex-col gap-1.5 text-xs text-[#597171]">
-            <span className="font-semibold text-[#244d4f]">Worthing &amp; Sussex, UK</span>
+            <span className="font-semibold text-[#244d4f]">Chichester, Sussex &amp; Hampshire</span>
             <a href="mailto:mada_7017@yahoo.com" className="text-[#2d6264] flex items-center gap-1.5 hover:underline">
               <Mail size={13} /> mada_7017@yahoo.com
             </a>
@@ -117,11 +117,11 @@ export function SiteFooter() {
           <img src={iconUrl} alt="Quiet Space house and leaf icon" className="footer-icon" />
           <div>
             <p className="footer-title">Quiet Space</p>
-            <p className="footer-subtitle">Home Organising &amp; Decluttering • Magdalena</p>
+            <p className="footer-subtitle">Professional Home Organiser &amp; Property Stylist • Magdalena</p>
           </div>
         </div>
         <div className="footer-message">
-          <p style={{ margin: "0 0 6px 0", color: "#fffdf8", fontWeight: 600 }}>Worthing &amp; Sussex, UK</p>
+          <p style={{ margin: "0 0 6px 0", color: "#fffdf8", fontWeight: 600 }}>Chichester, Sussex &amp; Hampshire</p>
           <a href="mailto:mada_7017@yahoo.com" style={{ color: "#d9b973", textDecoration: "none", fontSize: "13px", display: "inline-flex", alignItems: "center", gap: "6px" }}>
             <Mail size={14} /> mada_7017@yahoo.com
           </a>
@@ -134,7 +134,7 @@ export function SiteFooter() {
       </div>
       <div className="footer-bottom">
         <span>© {new Date().getFullYear()} Quiet Space (QuietSpace.org.uk)</span>
-        <span>Creating calm, functional, and aesthetically pleasing homes.</span>
+        <span>Bring peace and beauty to your home and enjoy living in it.</span>
       </div>
     </footer>
   );

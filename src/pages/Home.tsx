@@ -33,10 +33,10 @@ export default function Home() {
     <SiteShell>
       <section className="hero-section">
         <div className="hero-content">
-          <div className="eyebrow"><span /> Worthing & Sussex • Home Organising</div>
+          <div className="eyebrow"><span /> Chichester, Sussex &amp; Hampshire • Home Organising &amp; Property Staging</div>
           <h1>Make room for the <em>life</em> you want to live.</h1>
           <p className="hero-copy">
-            Thoughtful home organising and decluttering by Magdalena, designed to bring calm, function, and enduring beauty to everyday life.
+            Professional home organising, gentle decluttering, and property staging by Magdalena. Bring peace and beauty to your home and enjoy living in it.
           </p>
           <div className="hero-actions">
             <Link className="button-primary" href="/contact">
@@ -49,7 +49,7 @@ export default function Home() {
         </div>
         <div className="hero-image-wrap">
           <img src={heroUrl} alt="A calm organised home office with natural storage" className="hero-image" />
-          <div className="hero-image-caption"><span>Quiet Space</span><span>Worthing & Sussex</span></div>
+          <div className="hero-image-caption"><span>Quiet Space</span><span>Chichester &amp; Beyond</span></div>
         </div>
         <div className="hero-scroll"><ArrowDown size={15} /> Scroll to settle in</div>
       </section>
@@ -96,7 +96,7 @@ export default function Home() {
       <section className="affirmation-section">
         <p className="eyebrow eyebrow-light"><span /> A note from Quiet Space</p>
         <blockquote>“Your home can hold your life <em>without holding you back.</em>”</blockquote>
-        <div className="affirmation-line"><Check size={15} /> Based in Worthing — serving Brighton, Chichester, and across Sussex.</div>
+        <div className="affirmation-line"><Check size={15} /> Based in Chichester — serving West Sussex, Hampshire, and South Surrey.</div>
       </section>
 
       <section className="gallery-tease section-wrap">
