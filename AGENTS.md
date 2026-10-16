@@ -81,6 +81,12 @@ This project operates on a structured **Human-AI Partnership**:
 ---
 
 
+### Visual & Screenshot Inspection Protocol
+- **Rule:** Whenever Alex says "see screenshot", "check screenshot", "look at the screenshot", "I've sent you a screenshot", or mentions a screenshot/image without specifying an explicit path:
+- **Requirement:** Immediately query and inspect the most recently modified image file in `C:\Users\TotalBiz\Pictures\Screenshots\` using the `view_file` tool. Never ask him to paste paths or drag-and-drop into an IDE.
+
+---
+
 ## III. Session Continuity Protocol
 
 To ensure 100% seamless progress across sessions:
