@@ -100,9 +100,20 @@ At the start of every session, AGY must inspect:
 Whenever the Project Director says **"That's a wrap"** (or wraps up a session/milestone), execute these 6 closing steps automatically:
 1. **Telegram Fleet Context & Tools Audit:** If any new features, endpoints, cron jobs, or core behaviors were built in this session, verify whether the project's Telegram Bot context (`context/<project>.md`) and tool script (`tools/<project>.py`) need to know about them. If yes, update them immediately before committing.
 2. **Sync Documentation:** Update `GEMINI.md` with any new endpoints, schemas, tools, or architectural changes.
-3. **Git Commit & Push:** Verify all modified workspace files are cleanly staged, committed, and pushed to GitHub.
-4. **Seedbox & Live Daemon Synchronization:** If any context/tool files were touched, deploy to seedbox `/storage/services/telegram_gateway/` and verify running daemon PID (or reload via detached command).
-5. **Log Session Close:** Append `SESSION_CLOSE` entry in <0.1s using: `python "C:\Users\TotalBiz\Documents\AI_Usage_Audit\log_task.py" <ProjectName> "<Full Session Summary>" "<ModelTier>" "0" "~1.5k" "SESSION_CLOSE"`
+3. **Git Commit & Synchronous Push:** Stage all modified workspace files, commit with a descriptive message, and execute `git push origin <branch>` **synchronously**. Wait and verify that `git push` has completed with exit code `0` before starting Step 4.
+4. **Environment-Aware Seedbox & Daemon Synchronization (No Loopbacks):**
+   - **If running on Windows Laptop (`win32`):**
+     - **4a. Pull Updated Repo on Seedbox Workspace:** Now that Step 3's push is live on GitHub, execute a one-way pull on the matching seedbox workspace (`/storage/workspaces/<Project>`):
+       ```bash
+       ssh -i ~/.ssh/gigarapid_key -p 34004 lovefilm2018@openssh-ubuntu-lovefilm2018.elektra.mygiga.cloud "git -C /storage/workspaces/<Project> pull --rebase --autostash"
+       ```
+     - **4b. Live Service Reload (if applicable):** If Telegram Gateway or Spoxify files were modified, sync to `/storage/services/...` and reload the daemon.
+   - **If running on Seedbox Linux (`linux` inside `/storage/workspaces/<Project>`):**
+     - **4a. NO SSH / NO Git Pull Loopback:** Because this session already committed and pushed directly from `/storage/workspaces/<Project>` in Step 3, **DO NOT** SSH to the seedbox or run `git pull`.
+     - **4b. Local Service Sync (if applicable):** If Telegram Gateway or Spoxify files were touched, copy them locally (`cp`/`rsync` or `python3 spoxify/deploy.py --seedbox-only`) to `/storage/services/...` and reload the local daemon directly in bash.
+5. **Log Session Close:** Append `SESSION_CLOSE` entry in <0.1s using:
+   - Windows Laptop: `python "C:\Users\TotalBiz\Documents\AI_Usage_Audit\log_task.py" <ProjectName> "<Full Session Summary>" "<ModelTier>" "0" "~1.5k" "SESSION_CLOSE"`
+   - Seedbox Linux: `python3 "/storage/workspaces/AI_Usage_Audit/log_task.py" <ProjectName> "<Full Session Summary>" "<ModelTier>" "0" "~1.5k" "SESSION_CLOSE"`
 6. **Executive Recap:** Present a concise closing summary of all achievements and verified system status.
 ---
 
