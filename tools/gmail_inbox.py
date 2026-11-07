@@ -22,6 +22,10 @@ def find_token():
     # Check current directory, project roots, and central locations
     paths = [
         os.path.join(os.getcwd(), "token.json"),
+        "/storage/services/telegram_gateway/token.json",
+        "/storage/services/telegram_gateway/gmail_token.json",
+        "/storage/workspaces/LoveFilm/token.json",
+        "/home/lovefilm2018/.gemini/gmail_token.json",
         r"C:\Users\TotalBiz\Documents\totalbizsupport\token.json",
         r"C:\Users\TotalBiz\Documents\LoveFilm\token.json",
         r"C:\Users\TotalBiz\Documents\Bijou\token.json",
@@ -183,9 +187,39 @@ def reply_message(message_id, reply_body):
     print("=" * 85)
     print("Open Gmail to review the draft and click Send!")
 
+def compose_draft(to, subject, body):
+    service = get_service()
+    msg = MIMEMultipart()
+    msg['To'] = to
+    msg['From'] = "Alex Poxon <totalbizsupport@gmail.com>"
+    msg['Subject'] = subject
+    msg.attach(MIMEText(body, 'plain'))
+    raw = base64.urlsafe_b64encode(msg.as_bytes()).decode('utf-8')
+
+    draft_body = {
+        'message': {
+            'raw': raw
+        }
+    }
+    draft = service.users().drafts().create(userId='me', body=draft_body).execute()
+    print("\n" + "=" * 85)
+    print("🎉 NEW DRAFT CREATED IN GMAIL!")
+    print(f"Draft ID: {draft.get('id')}")
+    print(f"To:       {to}")
+    print(f"Subject:  {subject}")
+    print("=" * 85)
+    print("Open Gmail Drafts folder to review and click Send!")
+    return draft
+
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description="Universal Gmail CLI Tool")
     subparsers = parser.add_subparsers(dest='cmd')
+
+    # compose draft
+    p_comp = subparsers.add_parser('compose')
+    p_comp.add_argument('to', help='Recipient email address')
+    p_comp.add_argument('subject', help='Email subject')
+    p_comp.add_argument('body', help='Email body text')
 
     # search / list
     p_search = subparsers.add_parser('search')
@@ -221,5 +255,7 @@ if __name__ == '__main__':
         read_message(args.id)
     elif args.cmd == 'reply':
         reply_message(args.id, args.body)
+    elif args.cmd == 'compose':
+        compose_draft(args.to, args.subject, args.body)
     else:
         search_messages('in:inbox', 5)
