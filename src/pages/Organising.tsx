@@ -1,6 +1,7 @@
 /* Quiet Space — Home Organising page (client design, Page 3). */
 import { SiteShell } from "@/components/SiteShell";
-import { ConsultationButton, PageHead, ServiceTabs, Wordmark } from "@/components/ServiceParts";
+import { ConsultationButton, ServiceTabs, Wordmark } from "@/components/ServiceParts";
+import { SplitHero } from "@/components/SplitHero";
 import { assetUrl } from "@/lib/assets";
 
 const photoUrl = assetUrl("images/redesign/hero-folding-laundry.webp");
@@ -18,7 +19,14 @@ export default function Organising() {
     <SiteShell>
       <div className="qs-redesign">
         <ServiceTabs />
-        <PageHead title="Home Organising" tagline="A home that works for the way you live." />
+        <SplitHero image="hero-kitchen-shelves" imageAlt="A bright kitchen with open oak shelves, ceramics and olive sprigs" imagePosition="center top" labelledBy="org-title">
+          <h1 id="org-title">Home Organising &amp; Decluttering</h1>
+          <p className="lede">The space you live in affects how you feel.</p>
+          <p>Without the right systems, things can easily get out of control. A cluttered home is often the result of a lack of organisation.</p>
+          <p>I help you let go of unwanted items, create practical organising systems and make the most of your space.</p>
+          <p>I always aim to use what you already have at home. The goal is to let go of what you no longer need and avoid buying more.</p>
+          <p>Beautiful organisation goes beyond pretty storage boxes. I focus on creating a space that looks good, works well and is easy to maintain.</p>
+        </SplitHero>
         <section className="qs-rows">
           {moments.map((m) => (
             <article className="qs-row" key={m.title}>

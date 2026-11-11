@@ -1,6 +1,7 @@
 /* Quiet Space — Home Staging page (client design, Page 5). */
 import { SiteShell } from "@/components/SiteShell";
-import { ConsultationButton, PageHead, ServiceTabs, Wordmark, leafBulletUrl } from "@/components/ServiceParts";
+import { ConsultationButton, ServiceTabs, Wordmark, leafBulletUrl } from "@/components/ServiceParts";
+import { SplitHero } from "@/components/SplitHero";
 import { assetUrl } from "@/lib/assets";
 
 const photoUrl = assetUrl("images/redesign/hero-styling-couch.webp");
@@ -21,7 +22,12 @@ export default function Staging() {
     <SiteShell>
       <div className="qs-redesign">
         <ServiceTabs />
-        <PageHead title="Home Staging" tagline="Help people picture themselves at home." />
+        <SplitHero image="hero-staging-room" imageAlt="A sunlit living room with a sage throw, wooden coffee table and plants" imagePosition="center" labelledBy="stage-title">
+          <h1 id="stage-title">Property Staging</h1>
+          <p className="lede">First impressions matter.</p>
+          <p>I prepare homes for sale, rental or photography by working with what you already own.</p>
+          <p>Together, we can highlight your home’s potential and create a welcoming space for prospective buyers or guests.</p>
+        </SplitHero>
         <section className="qs-sheet" aria-labelledby="when-title">
           <h2 id="when-title">When can home staging help?</h2>
           <ul className="qs-checklist">

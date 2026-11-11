@@ -11,8 +11,8 @@ const sprigRight = assetUrl("images/redesign/sprig-right.webp");
 
 const navigation = [
   { href: "/", label: "Home" },
-  { href: "/about", label: "About" },
-  { href: "/services", label: "Services" },
+  { href: "/about", label: "About Me" },
+  { href: "/services", label: "Services & Prices" },
   { href: "/contact", label: "Contact" },
 ];
 
@@ -77,7 +77,7 @@ export function SiteFooter() {
       </div>
       <div className="qs-footer-meta">
         <span>Based in Chichester, West Sussex — serving Sussex &amp; Hampshire</span>
-        <a href="mailto:mada_7017@yahoo.com"><Mail size={14} /> mada_7017@yahoo.com</a>
+        <a href="mailto:quietspace.chichester@gmail.com"><Mail size={14} /> quietspace.chichester@gmail.com</a>
         <Link href="/gallery">Gallery</Link>
         <span>© {new Date().getFullYear()} Quiet Space</span>
       </div>
