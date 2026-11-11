@@ -15,7 +15,7 @@ This project operates on a structured **Human-AI Partnership**:
 
 ### 2. Autonomous API & Live Inspection
 - **Rule:** When debugging or verifying changes, the AI must inspect real DOM components, link integrity, and responsive breakpoints autonomously where tools permit.
-- **Requirement:** Verify that external links (e.g. WhatsApp triggers, mailto links to `mada_7017@yahoo.com`, Instagram links) and asset references are structurally valid.
+- **Requirement:** Verify that external links (e.g. WhatsApp triggers, mailto links to `quietspace.chichester@gmail.com`, phone/WhatsApp to `07455 020140`, Instagram links) and asset references are structurally valid.
 
 ### 3. Build & TypeScript Safety
 - **Rule:** Maintain clean Vite + React TypeScript build integrity. Ensure changes pass `npx tsc --noEmit` and `npx vite build` without compilation or bundling errors.
@@ -23,7 +23,7 @@ This project operates on a structured **Human-AI Partnership**:
 
 ### 4. Database Schema & Form/Contact Routing Integrity
 - **Rule:** Ensure all lead-generation paths (consultation forms, email triggers, WhatsApp CTA) maintain strict schema and formatting accuracy.
-- **Requirement:** Never hardcode dummy contact details. Always use canonical client credentials (`mada_7017@yahoo.com`, Quiet Space, Worthing & Sussex).
+- **Requirement:** Never hardcode dummy contact details. Always use canonical client credentials (`quietspace.chichester@gmail.com`, phone/WhatsApp `07455 020140`, Quiet Space, Chichester & Sussex).
 
 ### 5. Core Domain & Brand Logic Rules
 - **Rule:** All copy and visual solutions must align with the "Quiet Space" brand persona — serene, calm, functional, and aesthetically pleasing.

@@ -6,7 +6,8 @@
 - **Business Name:** Quiet Space (Home Organising, Decluttering & Property Staging)
 - **Tagline:** *"Bring peace and beauty to your home and enjoy living in it."*
 - **Founder & Specialist:** Magdalena ("Magda")
-- **Client Contact Email:** `mada_7017@yahoo.com` (Custom domain Google Workspace active; email aliases in selection)
+- **Client Contact Email:** `quietspace.chichester@gmail.com` (Custom domain Google Workspace active; email aliases in selection)
+- **Client Contact Phone / WhatsApp:** `07455 020140`
 - **Location & Reach:** Based in Chichester, West Sussex — serving West Sussex (Chichester, Worthing, Arundel, Bognor Regis, Littlehampton, Midhurst), Hampshire (Portsmouth, Southsea, Emsworth, Havant, Petersfield, Fareham), and South Surrey. UK-wide travel upon arrangement.
 - **Primary Domain:** `yourquietspace.co.uk`
 - **Staging / Fallback URL:** `https://lovefilm2018.github.io/quietspace/`
@@ -59,28 +60,34 @@
 - **Framework & Build:** React 19 + TypeScript + Vite + Tailwind CSS (Single-Page Application / SPA).
 - **Routing:** `wouter` lightweight client-side router.
 - **UI Components & Icons:** Lucide React, Radix UI primitives, and Framer Motion micro-interactions.
-- **Forms & Lead Routing:** Formspree / Resend / Mailto direct enquiry routing to `mada_7017@yahoo.com` + WhatsApp floating contact trigger.
+- **Forms & Lead Routing:** Formspree / Direct mailto enquiry routing to `quietspace.chichester@gmail.com` + WhatsApp direct trigger (`07455 020140`).
 - **Hosting & CI/CD:** GitHub Pages / Cloudflare Pages with automated build workflows (`.github/workflows/deploy.yml`).
 
 ---
 
-## 5. Website Page Structure & Blueprint
+## 5. Website Page Structure & Blueprint (Client Redesign Alignment)
+- **Primary Navigation:** `Home` | `About Me` | `Services & Prices` | `Contact`
 - **Home (`/`):**
-  - **Hero Section:** High-impact serene room visual, warm headline (*"Transform your home into a calm sanctuary"*), clear booking/enquiry CTA.
-  - **Transformation Proof (Before & After):** Real visual results showcasing decluttering impact.
-  - **Core Services Preview:** 3–4 visual cards highlighting Wardrobes, Kitchens, Whole-Home & Moving.
-  - **About Magda Snippet:** Warm introduction, professional philosophy, and photo.
-  - **How It Works (3 Steps):** 1. Free Consultation -> 2. Hands-on Declutter -> 3. Bespoke System Setup.
-  - **Testimonials & Social Proof:** Client quotes, 5-star ratings, and trust badges.
-  - **Enquiry / Consultation Form:** Simple date & room selection contact module.
-- **Services & Packages (`/services`):**
-  - Detailed breakdown of room services, package rates (half-day, full-day, multi-room packages), and FAQs.
-- **About Magda (`/about`):**
-  - Personal background, passion for home organisation, methodology, and values.
-- **Gallery (`/gallery`):**
-  - Filterable before/after photo grid and linked Instagram feed (`@QuietSpace...`).
+  - **Split Hero Section:** "Did you know?" Yale clutter research callout + "Less clutter. More calm." + `[Explore Services →]` button beside wardrobe hero photo.
+  - **Service Tiles (3 columns):** Decluttering, Home Organising, and Property Staging cards linking directly to dedicated service routes.
+- **About Me (`/about`):**
+  - **Magda Bio & Philosophy:** 10-year experience across private homes, boutique hotels, offices, and NHS St Richard’s Hospital background.
+  - **Visual Elements:** Kitchen portrait in arched frame, authentic handwritten "Magda" script signature, and decorative corner olive sprig.
+  - **CTA:** Consultation booking callout.
+- **Services & Prices (`/services`):**
+  - **Service Category Tabs:** Quick-switch tabs for `Pricing`, `Home Organising`, `Decluttering`, and `Home Staging`.
+  - **Session Pricing Cards:** Short Session (3–4 hrs, £120–£160), Full Day (6–10 hrs, £240–£400), and Property Staging (£160–£450+).
+  - **"How it works" 3-Step Process:** 1. Consultation -> 2. Declutter & organise -> 3. Enjoy your space in arched container with olive badges and custom icons.
+- **Dedicated Service Sub-Pages:**
+  - **Home Organising (`/services/organising`):** Split hero with Scandinavian oak kitchen shelves + 5 lifestyle transition scenarios (moving home, renovation, outgrown toys, growing family, kitchen pantry systems) + laundry folding photo.
+  - **Decluttering (`/services/decluttering`):** "When is it time to declutter?" 8-point leaf-bullet checklist, charity/Vinted rehoming callout, and serene bedroom wardrobe hero.
+  - **Home Staging (`/services/staging`):** "When can home staging help?" 8-point checklist, property value proposition, and sofa styling hero photo.
 - **Contact (`/contact`):**
-  - Consultation booking form, direct WhatsApp button, email links, and Sussex service area coverage map.
+  - **Mindfulness Reassurance:** "Your brain is very good at dealing with distractions..." / "A PRICELESS GIFT".
+  - **Direct Client Channels:** Direct click-to-email (`quietspace.chichester@gmail.com`), tap-to-call / direct WhatsApp (`07455 020140`), Chichester base location.
+  - **Visual:** Sun-drenched bedroom desk & cozy bed photo.
+- **Gallery (`/gallery`):**
+  - Accessible via footer; contains interactive before/after photo showcase and vertical transformation reels.
 
 ---
 
@@ -113,9 +120,16 @@
   - Client enrolled in Google Workspace for `yourquietspace.co.uk`.
   - DNS TXT record verified with Google; MX records migrated to Google Workspace Gmail.
   - Client currently selecting professional email aliases (e.g. `magda@yourquietspace.co.uk` or `hello@yourquietspace.co.uk`).
-- [ ] **Phase 10: Google Business Profile (GBP) & Production Domain Cutover:**
-  - Link GitHub Pages custom domain / Cloudflare DNS to `yourquietspace.co.uk`.
-  - Claim and verify Google Business Profile for Quiet Space in Chichester & West Sussex.
+- [x] **Phase 10: Client Design System Rebuild & Page Alignment (November 2026):**
+  - Processed Magda's complete design package across Pages 1–6 and 4 high-fidelity desktop mockups.
+  - Rebuilt global header and footer with Japandi linen aesthetic, custom leaf flourishes, and updated nav: `Home`, `About Me`, `Services & Prices`, `Contact`.
+  - Transformed Home page into a split-hero layout with the Yale University clutter research callout and 3 visual service cards (Decluttering, Home Organising, Property Staging).
+  - Rebuilt About Me page with Magda's authentic kitchen portrait, NHS experience copy, transparent signature, and olive branch accent.
+  - Implemented multi-service architecture with dedicated sub-routes: `/services/organising`, `/services/decluttering`, `/services/staging`, and updated `/services` pricing & 3-step "How it works" process.
+  - Rebuilt Contact page with client's canonical email (`quietspace.chichester@gmail.com`) and phone/WhatsApp (`07455 020140`).
+- [ ] **Phase 11: Client Feedback Calibration & Domain Cutover:**
+  - Receive Magda's visual feedback on staging build.
+  - Finalize custom domain `yourquietspace.co.uk` DNS and claim Google Business Profile.
 
 ---
 
