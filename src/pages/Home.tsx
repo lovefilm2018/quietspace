@@ -1,11 +1,11 @@
 /* Quiet Space — Linen House: calm editorial page with ample breathing room, warm paper, and eucalyptus detail. */
-import { ArrowDown, ArrowUpRight, Check, Flower2, Sparkles, MapPin, Mail, MessageCircle } from "lucide-react";
+import { ArrowRight, ArrowUpRight, Check, Sparkles } from "lucide-react";
 import { Link } from "wouter";
 import { SiteShell } from "@/components/SiteShell";
 import { assetUrl } from "@/lib/assets";
+import "@/redesign.css";
 
-const heroUrl = assetUrl("images/quiet-space-hero.jpg");
-const processUrl = assetUrl("images/quiet-space-process.jpg");
+const heroWardrobeUrl = assetUrl("images/redesign/hero-wardrobe-woman.webp");
 const magdaBioUrl = assetUrl("images/magda-bio.webp");
 const kitchenUrl = assetUrl("images/quiet-space-gallery-kitchen.jpg");
 const livingUrl = assetUrl("images/quiet-space-gallery-living.jpg");
@@ -31,37 +31,23 @@ const ways = [
 export default function Home() {
   return (
     <SiteShell>
-      <section className="hero-section">
-        <div className="hero-content">
-          <div className="eyebrow"><span /> Chichester, Sussex &amp; Hampshire • Home Organising &amp; Property Staging</div>
-          <h1>Make room for the <em>life</em> you want to live.</h1>
-          <p className="hero-copy">
-            Professional home organising, gentle decluttering, and property staging by Magdalena. Bring peace and beauty to your home and enjoy living in it.
-          </p>
-          <div className="hero-actions">
-            <Link className="button-primary" href="/contact">
-              Book a consultation <ArrowUpRight size={17} />
-            </Link>
-            <Link className="text-action" href="/services">
-              Explore our services <span>→</span>
-            </Link>
+      <div className="qs-redesign">
+        <section className="qs-hero" aria-labelledby="home-title">
+          <img className="qs-hero-photo" src={heroWardrobeUrl} alt="Magda arranging neutral and sage clothes in a calm, light wardrobe" width={1536} height={1024} />
+          <div className="qs-hero-copy">
+            <h1 id="home-title">Make room for the life you want to live.</h1>
+            <p>Home organising, gentle decluttering and property staging across Chichester, Sussex and Hampshire. Bring peace and beauty to your home and enjoy living in it.</p>
+            <Link className="qs-button" href="/contact">Book a consultation <ArrowRight size={18} /></Link>
           </div>
-        </div>
-        <div className="hero-image-wrap">
-          <img src={heroUrl} alt="A calm organised home office with natural storage" className="hero-image" />
-          <div className="hero-image-caption"><span>Quiet Space</span><span>Chichester &amp; Beyond</span></div>
-        </div>
-        <div className="hero-scroll"><ArrowDown size={15} /> Scroll to settle in</div>
-      </section>
+        </section>
 
-      <section className="intro-section section-wrap">
-        <div className="intro-mark"><Flower2 size={26} strokeWidth={1.25} /></div>
-        <div className="intro-text">
-          <p className="eyebrow"><span /> Space to breathe</p>
-          <h2>A calm home is not about perfection. It is about creating enough space for your day to unfold.</h2>
-        </div>
-        <p className="intro-support">Quiet Space helps you step out of the overwhelm and into practical, enduring order—without losing the warmth and personality that makes a home yours.</p>
-      </section>
+        <section className="qs-know" aria-labelledby="know-title">
+          <h2 id="know-title">Did you know?</h2>
+          <p>Research from Yale University suggests that visual clutter can affect how visual information is processed in the brain.</p>
+          <p>For some people, being surrounded by too many things can feel distracting. Creating a calmer, more organised space may help make everyday life feel easier.</p>
+          <Link className="qs-button" href="/services">Explore Services <ArrowRight size={18} /></Link>
+        </section>
+      </div>
 
       <section className="services-preview section-wrap">
         <div className="section-heading-row">

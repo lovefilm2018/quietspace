@@ -1,31 +1,37 @@
-/* Quiet Space — Linen House: a warm, slow-living editorial shell with eucalyptus accents and calm spacing. */
-import { Menu, X, ArrowUpRight, Mail, MapPin } from "lucide-react";
+/* Quiet Space — site chrome rebuilt from the client's designs: simple linen header, olive accents, calm footer. */
+import { Menu, X, Mail } from "lucide-react";
 import { useState } from "react";
 import { Link, useLocation } from "wouter";
 import { assetUrl } from "@/lib/assets";
+import "@/redesign.css";
 
-const logoUrl = assetUrl("images/quiet-space-horizontal-logo.png");
-const iconUrl = assetUrl("images/quiet-space-icon.png");
+const logoUrl = assetUrl("images/redesign/logo-header.webp");
+const sprigLeft = assetUrl("images/redesign/sprig-left.webp");
+const sprigRight = assetUrl("images/redesign/sprig-right.webp");
 
 const navigation = [
   { href: "/", label: "Home" },
   { href: "/about", label: "About" },
   { href: "/services", label: "Services" },
-  { href: "/gallery", label: "Gallery" },
   { href: "/contact", label: "Contact" },
 ];
 
-function NavLinks({ onNavigate }: { onNavigate?: () => void }) {
-  const [location] = useLocation();
+function isActive(location: string, href: string) {
+  if (href === "/") return location === "/";
+  return location === href || location.startsWith(`${href}/`);
+}
 
+function NavLinks({ onNavigate, className }: { onNavigate?: () => void; className: string }) {
+  const [location] = useLocation();
   return (
-    <nav aria-label="Primary navigation" className="flex flex-col gap-1 md:flex-row md:items-center md:gap-7">
+    <nav aria-label="Primary navigation" className={className}>
       {navigation.map((item) => (
         <Link
           key={item.href}
           href={item.href}
           onClick={onNavigate}
-          className={`nav-link ${location === item.href ? "nav-link-active" : ""}`}
+          aria-current={isActive(location, item.href) ? "page" : undefined}
+          className={`qs-nav-link ${isActive(location, item.href) ? "qs-nav-link-active" : ""}`}
         >
           {item.label}
         </Link>
@@ -34,107 +40,46 @@ function NavLinks({ onNavigate }: { onNavigate?: () => void }) {
   );
 }
 
-function MobileTabBar() {
-  const [location] = useLocation();
-
-  return (
-    <nav aria-label="Mobile page navigation" className="mobile-page-strip md:hidden">
-      <div className="mobile-page-strip-inner">
-        {navigation.map((item) => {
-          const isActive = location === item.href;
-          return (
-            <Link
-              key={item.href}
-              href={item.href}
-              className={`mobile-tab-item ${isActive ? "mobile-tab-item-active" : ""}`}
-            >
-              {item.label}
-            </Link>
-          );
-        })}
-      </div>
-    </nav>
-  );
-}
-
 export function SiteHeader() {
   const [open, setOpen] = useState(false);
-
   return (
-    <header className="site-header">
-      <div className="site-header-inner">
-        <Link href="/" className="brand-lockup" aria-label="Quiet Space home">
-          <img className="brand-wordmark" src={logoUrl} alt="Quiet Space — Home Organising & Decluttering" />
+    <header className="qs-chrome qs-header">
+      <div className="qs-header-inner">
+        <Link href="/" className="qs-brand" aria-label="Quiet Space — home">
+          <img src={logoUrl} alt="Quiet Space — Home Organising & Property Staging" width={1945} height={373} />
         </Link>
-
-        <div className="hidden md:block">
-          <NavLinks />
-        </div>
-
-        <div className="flex items-center gap-2.5">
-          <Link href="/contact" className="header-cta hidden sm:inline-flex">
-            Book Consultation <ArrowUpRight size={15} strokeWidth={1.8} />
-          </Link>
-
-          <button
-            type="button"
-            className="mobile-menu-button md:hidden"
-            onClick={() => setOpen((value) => !value)}
-            aria-label={open ? "Close navigation" : "Open navigation"}
-            aria-expanded={open}
-          >
-            {open ? <X size={22} /> : <Menu size={22} />}
-          </button>
-        </div>
+        <NavLinks className="qs-nav qs-nav-desktop" />
+        <button
+          type="button"
+          className="qs-menu-button"
+          onClick={() => setOpen((v) => !v)}
+          aria-label={open ? "Close navigation" : "Open navigation"}
+          aria-expanded={open}
+        >
+          {open ? <X size={24} /> : <Menu size={24} />}
+        </button>
       </div>
-
-      {/* Persistent horizontal page strip on mobile for immediate visual page access */}
-      <MobileTabBar />
-
-      {open && (
-        <div className="mobile-nav md:hidden">
-          <NavLinks onNavigate={() => setOpen(false)} />
-          <Link href="/contact" onClick={() => setOpen(false)} className="header-cta mt-5 inline-flex w-full justify-center">
-            Book Consultation <ArrowUpRight size={15} strokeWidth={1.8} />
-          </Link>
-          <div className="mobile-nav-footer mt-4 pt-3 border-t border-[rgba(45,98,100,0.15)] flex flex-col gap-1.5 text-xs text-[#597171]">
-            <span className="font-semibold text-[#244d4f]">Chichester, Sussex &amp; Hampshire</span>
-            <a href="mailto:mada_7017@yahoo.com" className="text-[#2d6264] flex items-center gap-1.5 hover:underline">
-              <Mail size={13} /> mada_7017@yahoo.com
-            </a>
-          </div>
-        </div>
-      )}
+      {open && <NavLinks className="qs-nav qs-nav-mobile" onNavigate={() => setOpen(false)} />}
     </header>
   );
 }
 
 export function SiteFooter() {
   return (
-    <footer className="site-footer">
-      <div className="footer-main">
-        <div className="footer-brand">
-          <img src={iconUrl} alt="Quiet Space house and leaf icon" className="footer-icon" />
-          <div>
-            <p className="footer-title">Quiet Space</p>
-            <p className="footer-subtitle">Professional Home Organiser &amp; Property Stylist • Magdalena</p>
-          </div>
-        </div>
-        <div className="footer-message">
-          <p style={{ margin: "0 0 6px 0", color: "#fffdf8", fontWeight: 600 }}>Chichester, Sussex &amp; Hampshire</p>
-          <a href="mailto:mada_7017@yahoo.com" style={{ color: "#d9b973", textDecoration: "none", fontSize: "13px", display: "inline-flex", alignItems: "center", gap: "6px" }}>
-            <Mail size={14} /> mada_7017@yahoo.com
-          </a>
-        </div>
-        <div className="footer-links">
-          {navigation.map((item) => (
-            <Link key={item.href} href={item.href}>{item.label}</Link>
-          ))}
-        </div>
+    <footer className="qs-chrome qs-footer">
+      <img className="qs-footer-sprig qs-footer-sprig-left" src={sprigLeft} alt="" aria-hidden="true" loading="lazy" />
+      <img className="qs-footer-sprig qs-footer-sprig-right" src={sprigRight} alt="" aria-hidden="true" loading="lazy" />
+      <div className="qs-footer-inner">
+        <Link href="/" className="qs-brand" aria-label="Quiet Space — home">
+          <img src={logoUrl} alt="Quiet Space — Home Organising & Property Staging" width={1945} height={373} loading="lazy" />
+        </Link>
+        <NavLinks className="qs-nav qs-footer-nav" />
       </div>
-      <div className="footer-bottom">
-        <span>© {new Date().getFullYear()} Quiet Space (yourquietspace.co.uk)</span>
-        <span>Bring peace and beauty to your home and enjoy living in it.</span>
+      <div className="qs-footer-meta">
+        <span>Based in Chichester, West Sussex — serving Sussex &amp; Hampshire</span>
+        <a href="mailto:mada_7017@yahoo.com"><Mail size={14} /> mada_7017@yahoo.com</a>
+        <Link href="/gallery">Gallery</Link>
+        <span>© {new Date().getFullYear()} Quiet Space</span>
       </div>
     </footer>
   );
@@ -142,7 +87,7 @@ export function SiteFooter() {
 
 export function SiteShell({ children }: { children: React.ReactNode }) {
   return (
-    <div className="site-shell">
+    <div className="qs-shell">
       <SiteHeader />
       <main>{children}</main>
       <SiteFooter />

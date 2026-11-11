@@ -10,6 +10,9 @@ import Contact from "./pages/Contact";
 import Gallery from "./pages/Gallery";
 import Home from "./pages/Home";
 import Services from "./pages/Services";
+import Organising from "./pages/Organising";
+import Decluttering from "./pages/Decluttering";
+import Staging from "./pages/Staging";
 
 const rawBase = import.meta.env.BASE_URL || "/";
 const basePath = rawBase === "./" ? "" : rawBase.replace(/\/$/, "");
@@ -20,6 +23,9 @@ function PageRoutes() {
       <Route path="/" component={Home} />
       <Route path="/about" component={About} />
       <Route path="/services" component={Services} />
+      <Route path="/services/organising" component={Organising} />
+      <Route path="/services/decluttering" component={Decluttering} />
+      <Route path="/services/staging" component={Staging} />
       <Route path="/gallery" component={Gallery} />
       <Route path="/contact" component={Contact} />
       <Route path="/404" component={NotFound} />

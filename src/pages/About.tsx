@@ -1,73 +1,68 @@
-/* Quiet Space — Linen House: a restorative about page that treats organisation as supportive, human, and practical. */
-import { ArrowUpRight, CircleCheck, Leaf, Heart, MapPin, Sparkles } from "lucide-react";
+/* Quiet Space — About: rebuilt from Magda's design (QS Pics / Page 2) as live, accessible text with her portrait, signature and olive sprig. */
+import { ArrowRight } from "lucide-react";
 import { Link } from "wouter";
 import { SiteShell } from "@/components/SiteShell";
 import { assetUrl } from "@/lib/assets";
+import "@/redesign.css";
 
-const magdaBioUrl = assetUrl("images/magda-bio.webp");
-
-const principles = [
-  "No judgement, no pressure, no one-size-fits-all plan.",
-  "Practical, enduring systems built around your real routines.",
-  "High standards of cleanliness, reliability, and NHS-trained discretion.",
-  "Based in Chichester, serving West Sussex, Hampshire & South Surrey.",
-];
+const portraitUrl = assetUrl("images/redesign/magda-kitchen-portrait.webp");
+const signatureUrl = assetUrl("images/redesign/magda-signature.webp");
+const sprigUrl = assetUrl("images/redesign/leaf-corner-olives.webp");
 
 export default function About() {
   return (
     <SiteShell>
-      <section className="page-hero about-hero">
-        <p className="eyebrow"><span /> About Magdalena &amp; Quiet Space</p>
-        <h1>Bring peace and beauty to your home and <em>enjoy living in it.</em></h1>
-        <p className="page-hero-lead">Quiet Space was founded by Magdalena ("Magda") around a simple belief: a well-organised home should make everyday life feel lighter, calmer, and more joyful.</p>
-        <div className="page-hero-scroll">A quieter rhythm begins here <span>↓</span></div>
-      </section>
+      <div className="qs-redesign">
+        <section className="qs-about" aria-labelledby="about-title">
+          <div className="qs-about-inner">
+            <div className="qs-about-copy">
+              <h1 id="about-title" className="qs-about-title">About Me</h1>
+              <hr className="qs-rule" />
+              <h2 className="qs-about-hello">Hi, I’m Magda.</h2>
 
-      <section className="about-intro section-wrap">
-        <div className="about-intro-visual">
-          <img src={magdaBioUrl} alt="Magdalena, founder and specialist at Quiet Space" style={{ objectPosition: "center 20%" }} />
-          <div className="visual-note"><Leaf size={17} /> Magdalena — Professional Organiser &amp; Stylist</div>
-        </div>
-        <div className="about-intro-copy">
-          <p className="eyebrow"><span /> Magdalena’s Journey &amp; Approach</p>
-          <h2>Organisation has always come naturally to me, and I genuinely enjoy it.</h2>
-          <p>
-            For the past 10 years, I have worked across boutique hotels, holiday homes, corporate offices, and private residences. This experience has given me the opportunity to see many different spaces, understand varied interior styles, and continuously learn what truly works in everyday life—and what doesn’t.
-          </p>
-          <p>
-            I also work at <strong>St Richard’s Hospital</strong> within the <strong>NHS</strong> in Chichester, where I have developed rigorous standards of cleanliness, meticulous attention to detail, dependability, and absolute discretion.
-          </p>
-          <p>
-            Based in Chichester, I travel regularly to clients across West Sussex (including Worthing, Chichester, Arundel, Bognor Regis, Littlehampton, and Midhurst), Hampshire (Portsmouth, Southsea, Emsworth, Havant, Petersfield), and South Surrey.
-          </p>
-        </div>
-      </section>
+              <p>
+                I’ve always had a natural passion for creating clean, organised and calm spaces. Organising comes naturally to me. It’s something I genuinely enjoy and have always found calming.
+              </p>
+              <p>I understand how clutter and having too many things around can affect your focus, wellbeing and everyday life.</p>
+              <p>For me, creating an organised home isn’t just about making it look beautiful — it’s about making daily life feel simpler and easier.</p>
 
-      <section className="principles-section section-wrap">
-        <div className="principles-header">
-          <p className="eyebrow"><span /> The Quiet Space way</p>
-          <h2>Gentle in manner.<br /><em>Grounded in practice.</em></h2>
-        </div>
-        <div className="principles-list">
-          {principles.map((principle, index) => (
-            <div className="principle" key={principle}>
-              <span>0{index + 1}</span>
-              <CircleCheck size={19} strokeWidth={1.4} />
-              <p>{principle}</p>
+              <hr className="qs-rule" />
+
+              <p>
+                For the past 10 years, I’ve worked in private homes, holiday homes, hotels and offices. I also work at St Richard’s Hospital.
+              </p>
+              <p>
+                This experience has given me the chance to see many different spaces and ways of organising them. I’m always finding new ideas and inspiration, but most importantly, I can see what really works in everyday life and what doesn’t.
+              </p>
+              <p>
+                I love creating calm, functional spaces that make everyday life easier and more enjoyable. My goal is to help you feel happier in your home, with a space that truly works for you.
+              </p>
+
+              <img className="qs-about-signature" src={signatureUrl} alt="Magda" width={240} height={73} />
             </div>
-          ))}
-        </div>
-      </section>
 
-      <section className="about-quote-section">
-        <div className="about-quote-mark">“</div>
-        <div><p className="eyebrow eyebrow-light"><span /> Why it matters</p><h2>When your home works with you, it becomes easier to be <em>present</em> in it.</h2></div>
-      </section>
+            <aside className="qs-about-aside">
+              <img
+                className="qs-about-portrait"
+                src={portraitUrl}
+                alt="Magda smiling, holding a mug in a bright, tidy kitchen"
+                width={1536}
+                height={1024}
+              />
+              <p className="qs-about-caption">Based in Chichester, serving Sussex &amp; Hampshire</p>
+            </aside>
+          </div>
 
-      <section className="page-cta section-wrap">
-        <div><p className="eyebrow"><span /> A considered next step</p><h2>Ready to create your quiet space?</h2></div>
-        <Link href="/contact" className="button-primary">Book a consultation <ArrowUpRight size={17} /></Link>
-      </section>
+          <img className="qs-sprig-corner" src={sprigUrl} alt="" aria-hidden="true" loading="lazy" />
+        </section>
+
+        <section className="qs-about-cta">
+          <h2>Ready to create your quiet space?</h2>
+          <Link href="/contact" className="qs-button">
+            Book a consultation <ArrowRight size={18} />
+          </Link>
+        </section>
+      </div>
     </SiteShell>
   );
 }
