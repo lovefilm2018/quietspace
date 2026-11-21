@@ -19,14 +19,23 @@ export default function Home() {
         <SplitHero
           image="hero-wardrobe-woman"
           imageAlt="Magda arranging neutral and sage clothes in a calm, light wardrobe"
-          imagePosition="75% 30%"
+          imagePosition="75% 22%"
           labelledBy="home-title"
+          className="qs-split-home"
         >
-          <h1 id="home-title">Did you know?</h1>
-          <p>Research from Yale University suggests that visual clutter can affect how visual information is processed in the brain.</p>
-          <p>For some people, being surrounded by too many things can feel distracting. Creating a calmer, more organised space may help make everyday life feel easier.</p>
-          <p className="lede">Less clutter. More calm.</p>
-          <Link className="qs-button" href="/services">Explore Services <ArrowRight size={18} /></Link>
+          <h1 id="home-title">Home Organising, Decluttering &amp; Practical Help at Home</h1>
+          <p className="lede">If you need some help at home because you feel like things have piled up, you’re in the right place.</p>
+          <div className="qs-home-body">
+            <p>I love looking after homes and organising spaces. Before we get started, I can help you make a practical plan. We’ll work out what needs doing first, where things should go and how to make better use of the space you have.</p>
+            <p>I can help you sort through your belongings, organise cupboards and wardrobes, and find practical storage solutions that work for you. If you’ve just moved, I can help you unpack and find a place for everything. I can also help you pack before a move or get your home ready to sell.</p>
+            <p>I can help with other things too, like arranging cleaning or laundry services, picking up an order or dropping things off at a charity shop.</p>
+            <p>I’m hardworking, very organised and hands-on. I pay attention to the little details and enjoy finding practical ways to make your home easier to live in.</p>
+            <p className="qs-home-close">Just get in touch and tell me what you need, and we’ll see how I can help.</p>
+          </div>
+          <div className="qs-home-actions">
+            <Link className="qs-button" href="/contact">Get in Touch <ArrowRight size={18} /></Link>
+            <Link className="qs-button qs-button-outline" href="/services">Explore Services</Link>
+          </div>
         </SplitHero>
 
         <section className="qs-tiles" aria-label="Our services">

@@ -11,11 +11,12 @@ type Props = {
   imagePosition?: string;
   children: React.ReactNode;
   labelledBy?: string;
+  className?: string;
 };
 
-export function SplitHero({ image, imageAlt, imagePosition = "center", children, labelledBy }: Props) {
+export function SplitHero({ image, imageAlt, imagePosition = "center", children, labelledBy, className }: Props) {
   return (
-    <section className="qs-split" aria-labelledby={labelledBy}>
+    <section className={className ? `qs-split ${className}` : "qs-split"} aria-labelledby={labelledBy}>
       <img className="qs-split-leaves" src={leavesUrl} alt="" aria-hidden="true" />
       <div className="qs-split-photo">
         <img src={assetUrl(`images/redesign/${image}.webp`)} alt={imageAlt} style={{ objectPosition: imagePosition }} />
