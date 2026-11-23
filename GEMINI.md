@@ -5,7 +5,7 @@
 ## 1. Project Overview & Business Identity
 - **Business Name:** Quiet Space (Home Organising, Decluttering & Property Staging)
 - **Tagline:** *"Bring peace and beauty to your home and enjoy living in it."*
-- **Founder & Specialist:** Magdalena ("Magda")
+- **Founder & Specialist:** Magdalena ("Magda") Radzik
 - **Client Contact Email:** `quietspace.chichester@gmail.com` (Custom domain Google Workspace active; email aliases in selection)
 - **Client Contact Phone / WhatsApp:** `07455 020140`
 - **Location & Reach:** Based in Chichester, West Sussex — serving West Sussex (Chichester, Worthing, Arundel, Bognor Regis, Littlehampton, Midhurst), Hampshire (Portsmouth, Southsea, Emsworth, Havant, Petersfield, Fareham), and South Surrey. UK-wide travel upon arrangement.

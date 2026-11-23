@@ -87,9 +87,9 @@ export const SEO_ROUTES: RouteSeo[] = [
   },
   {
     path: "/about/",
-    title: "About Magda | Chichester Home Organiser & Property Stager",
+    title: "About Magda (Magdalena Radzik) | Chichester Home Organiser",
     description:
-      "Meet Magda of Quiet Space. 10 years' home & boutique hotel organising experience plus St Richard's Hospital discretion across Chichester, Sussex & Hants.",
+      "Meet Magdalena (Magda) Radzik of Quiet Space. 10 years' home & boutique hotel organising plus St Richard's Hospital discretion in Chichester & Sussex.",
     ogImage: `${SITE_URL}/images/redesign/magda-kitchen-portrait.webp`,
     breadcrumbs: [
       { name: "Home", path: "/" },
@@ -326,8 +326,8 @@ export function buildJsonLd(route: RouteSeo) {
     {
       "@type": "Person",
       "@id": `${SITE_URL}/#magda`,
-      name: "Magdalena",
-      alternateName: "Magda",
+      name: "Magdalena Radzik",
+      alternateName: ["Magda", "Magda Radzik"],
       jobTitle: "Founder, Home Organiser & Property Stager",
       worksFor: { "@id": `${SITE_URL}/#business` },
       knowsAbout: [
