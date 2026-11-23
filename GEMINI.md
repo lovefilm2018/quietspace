@@ -127,9 +127,11 @@
   - Rebuilt About Me page with Magda's authentic kitchen portrait, NHS experience copy, transparent signature, and olive branch accent.
   - Implemented multi-service architecture with dedicated sub-routes: `/services/organising`, `/services/decluttering`, `/services/staging`, and updated `/services` pricing & 3-step "How it works" process.
   - Rebuilt Contact page with client's canonical email (`quietspace.chichester@gmail.com`) and phone/WhatsApp (`07455 020140`).
-- [ ] **Phase 11: Client Feedback Calibration & Domain Cutover:**
-  - Receive Magda's visual feedback on staging build.
-  - Finalize custom domain `yourquietspace.co.uk` DNS and claim Google Business Profile.
+- [x] **Phase 11: Technical SEO Overhaul, Pre-Rendering, GSC & GBP Launch (November 2026):**
+  - Completed Deep Research UK Local SEO & Marketing Blueprint and formatted client-ready Google Doc deliverable for Magda.
+  - Implemented build-time static pre-rendering (`vite build --ssr` + `scripts/prerender.mjs`) across all 12 canonical trailing-slash routes, `robots.txt`, `sitemap.xml`, `404.html`, and `LocalBusiness`/`Person`/`OfferCatalog`/`BreadcrumbList`/`FAQPage` JSON-LD.
+  - Added 4 high-ROI landing pages (`/services/move-in-unpacking/`, `/services/downsizing-bereavement/`, `/areas/hampshire/`, `/areas/south-surrey/`), homepage trust strip, WhatsApp photo-review CTAs, FAQ accordion, flexible "Areas Covered" travel copy, `Magdalena Radzik` founder SEO, and Google Tag (`GTM-T94KTW7C`).
+  - Submitted `sitemap.xml` in Google Search Console (12 pages discovered) and prepared Google Business Profile (Chichester SAB, Services, Logo & Product JPG assets) awaiting Magda's video verification and Wednesday feedback.
 
 ---
 
