@@ -1,5 +1,5 @@
 /* Quiet Space — Contact (client design): calm reassurance copy, then Magda's direct details beside a sunlit bedroom. */
-import { Mail, MapPin, MessageCircle, Phone } from "lucide-react";
+import { Instagram, Mail, MapPin, MessageCircle, Phone } from "lucide-react";
 import { SiteShell } from "@/components/SiteShell";
 import { SplitHero } from "@/components/SplitHero";
 import "@/redesign.css";
@@ -8,6 +8,7 @@ const EMAIL = "quietspace.chichester@gmail.com";
 const PHONE_DISPLAY = "07455 020140";
 const PHONE_TEL = "+447455020140";
 const WHATSAPP = "https://wa.me/447455020140?text=Hello%20Magda%2C%20I%27d%20like%20to%20enquire%20about%20Quiet%20Space.";
+const INSTAGRAM = "https://www.instagram.com/quietspace.organising/";
 
 export default function Contact() {
   return (
@@ -40,6 +41,10 @@ export default function Contact() {
               <li>
                 <span className="qs-contact-icon"><MapPin size={24} /></span>
                 <span>Location: Chichester<small>Serving West Sussex, Hampshire and South Surrey</small></span>
+              </li>
+              <li>
+                <span className="qs-contact-icon"><Instagram size={24} /></span>
+                <a href={INSTAGRAM} target="_blank" rel="noopener noreferrer">Instagram: @quietspace.organising</a>
               </li>
             </ul>
           </div>

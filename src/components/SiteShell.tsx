@@ -1,5 +1,5 @@
 /* Quiet Space — site chrome rebuilt from the client's designs: simple linen header, olive accents, calm footer. */
-import { Menu, X, Mail } from "lucide-react";
+import { Menu, X, Mail, Instagram } from "lucide-react";
 import { useState } from "react";
 import { Link, useLocation } from "wouter";
 import { assetUrl } from "@/lib/assets";
@@ -78,6 +78,7 @@ export function SiteFooter() {
       <div className="qs-footer-meta">
         <span>Based in Chichester, West Sussex — serving Sussex &amp; Hampshire</span>
         <a href="mailto:quietspace.chichester@gmail.com"><Mail size={14} /> quietspace.chichester@gmail.com</a>
+        <a href="https://www.instagram.com/quietspace.organising/" target="_blank" rel="noopener noreferrer"><Instagram size={14} /> @quietspace.organising</a>
         <Link href="/gallery">Gallery</Link>
         <span>© {new Date().getFullYear()} Quiet Space</span>
       </div>
