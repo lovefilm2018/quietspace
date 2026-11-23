@@ -37,10 +37,14 @@ export default function Staging() {
           </ul>
           <hr className="qs-rule qs-rule-long" />
           <h2>Make the most of your property.</h2>
-          <p className="qs-sheet-text">I can help you declutter, rearrange furniture and add thoughtful finishing touches to create a welcoming space that shows your property at its best.</p>
+          <p className="qs-sheet-text">
+            Whether preparing a Chichester or Hampshire home for estate agent photography or styling a coastal
+            holiday let in West Wittering or Bosham, I declutter, edit furniture flow, and add thoughtful finishing
+            touches using what you already own (from £160).
+          </p>
         </section>
         <div className="qs-photo-fade">
-          <img src={photoUrl} alt="Magda plumping cushions on a sage-green sofa in a bright living room" width={1672} height={941} loading="lazy" />
+          <img src={photoUrl} alt="Magda styling cushions on a sage-green sofa for pre-sale property photography" width={1672} height={941} loading="lazy" />
         </div>
         <section className="qs-closing">
           <p className="serif">A fresh perspective. A welcoming first impression.</p>

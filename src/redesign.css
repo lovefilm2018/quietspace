@@ -268,3 +268,110 @@
 .qs-split-copy > .qs-contact-lines { max-width: min(660px, 64%); }
 .qs-contact-lines > * { max-width: none; }
 @media (max-width: 860px) { .qs-split-copy > .qs-contact-lines { max-width: none; } .qs-contact-list li { flex-wrap: wrap; word-break: break-word; } }
+
+/* ---------- Trust Strip & Services FAQ / Travel Clarity ---------- */
+.qs-trust-strip {
+  width: min(1180px, calc(100% - 40px));
+  margin: 0 auto 28px;
+  padding: 18px 24px;
+  background: var(--qs-sand);
+  border: 1px solid rgba(207, 200, 184, 0.7);
+  border-radius: 16px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  text-align: center;
+}
+.qs-trust-item strong {
+  display: block;
+  font-family: var(--qs-serif);
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--qs-ink);
+  margin-bottom: 4px;
+}
+.qs-trust-item span {
+  display: block;
+  font-size: 0.88rem;
+  font-weight: 300;
+  line-height: 1.45;
+  color: var(--qs-body);
+}
+@media (max-width: 860px) {
+  .qs-trust-strip { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 520px) {
+  .qs-trust-strip { grid-template-columns: 1fr; }
+}
+
+.qs-info-banner {
+  width: min(1180px, calc(100% - 40px));
+  margin: 28px auto 0;
+  padding: 22px 28px;
+  background: var(--qs-sand);
+  border: 1px solid rgba(207, 200, 184, 0.7);
+  border-radius: 16px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+.qs-info-banner h3 {
+  font-size: 1.45rem;
+  margin-bottom: 8px;
+}
+.qs-info-banner p {
+  margin: 0;
+  font-size: 0.96rem;
+  font-weight: 300;
+  line-height: 1.6;
+}
+@media (max-width: 760px) {
+  .qs-info-banner { grid-template-columns: 1fr; }
+}
+
+.qs-faq {
+  width: min(900px, calc(100% - 40px));
+  margin: 0 auto;
+  padding: clamp(32px, 5vw, 56px) 0 clamp(56px, 8vw, 96px);
+}
+.qs-faq h2 {
+  text-align: center;
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 500;
+}
+.qs-faq .qs-rule {
+  margin: 16px auto 32px;
+  width: 48px;
+}
+.qs-faq-list {
+  display: grid;
+  gap: 12px;
+}
+.qs-faq-item {
+  background: var(--qs-sand);
+  border: 1px solid rgba(207, 200, 184, 0.7);
+  border-radius: 14px;
+  padding: 18px 22px;
+}
+.qs-faq-item summary {
+  cursor: pointer;
+  list-style: none;
+  font-family: var(--qs-serif);
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--qs-ink);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+.qs-faq-item summary::-webkit-details-marker {
+  display: none;
+}
+.qs-faq-item p {
+  margin: 12px 0 0;
+  font-size: 0.98rem;
+  font-weight: 300;
+  line-height: 1.65;
+  color: var(--qs-body);
+}

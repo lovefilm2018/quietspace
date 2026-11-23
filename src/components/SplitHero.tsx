@@ -19,7 +19,7 @@ export function SplitHero({ image, imageAlt, imagePosition = "center", children,
     <section className={className ? `qs-split ${className}` : "qs-split"} aria-labelledby={labelledBy}>
       <img className="qs-split-leaves" src={leavesUrl} alt="" aria-hidden="true" />
       <div className="qs-split-photo">
-        <img src={assetUrl(`images/redesign/${image}.webp`)} alt={imageAlt} style={{ objectPosition: imagePosition }} />
+        <img src={assetUrl(`images/redesign/${image}.webp`)} alt={imageAlt} fetchPriority="high" style={{ objectPosition: imagePosition }} />
       </div>
       <div className="qs-split-copy">{children}</div>
     </section>

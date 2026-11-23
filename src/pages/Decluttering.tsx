@@ -31,10 +31,14 @@ export default function Decluttering() {
           </ul>
           <hr className="qs-rule qs-rule-long" />
           <h2>Give your unwanted items a new home.</h2>
-          <p className="qs-sheet-text">Together, we can donate them to a charity shop, or I can help you list them on Vinted.</p>
+          <p className="qs-sheet-text">
+            Every decision stays yours. We sort belongings cleanly into keep, charity, Vinted resale, recycling, and
+            refuse—and where agreed, I can drop off clean charity-shop donations locally or coordinate a licensed
+            clearance partner for bulky waste.
+          </p>
         </section>
         <div className="qs-photo-fade">
-          <img src={photoUrl} alt="Magda choosing clothes in a calm, light bedroom wardrobe" width={1752} height={897} loading="lazy" />
+          <img src={photoUrl} alt="Magda choosing clothes in a calm, light bedroom wardrobe in West Sussex" width={1752} height={897} loading="lazy" />
         </div>
         <section className="qs-closing">
           <p className="small">You decide what stays and what goes.</p>

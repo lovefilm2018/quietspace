@@ -1,17 +1,39 @@
-/* Quiet Space — Services & pricing (client design, Page 6): three session cards plus a simple three-step process. */
-import { ArrowRight } from "lucide-react";
+/* Quiet Space — Services & pricing: three session cards, consultation & travel clarity, 3-step process, and plain-English FAQs. */
+import { ArrowRight, ChevronDown } from "lucide-react";
 import { Link } from "wouter";
 import { SiteShell } from "@/components/SiteShell";
 import { ServiceTabs } from "@/components/ServiceParts";
 import { assetUrl } from "@/lib/assets";
+import { SERVICES_FAQS } from "@/seo/routes";
 import "@/redesign.css";
 
 const img = (name: string) => assetUrl(`images/redesign/${name}.webp`);
 
 const packages = [
-  { image: "card-price-short-session", alt: "A woven basket of folded linen with an olive sprig", title: "Short Session", when: "3–4 hours", price: "£120 – £160", desc: "Perfect for a specific area, getting started or a quick reset." },
-  { image: "card-price-full-day", alt: "A wooden shelving unit with baskets, jars and a trailing plant", title: "Full Day", when: "6–10 hours", price: "£240 – £400", desc: "More time for bigger projects, multiple rooms or a complete refresh." },
-  { image: "card-price-staging", alt: "A neatly dressed bed beside a bedside table with olive leaves", title: "Property Staging", when: "From", price: "£160 – £450+", desc: "Tailored staging to help your property look its best for sale or let." },
+  {
+    image: "card-price-short-session",
+    alt: "A woven basket of folded linen with an olive sprig",
+    title: "Short Session",
+    when: "3–4 hours",
+    price: "£120 – £160",
+    desc: "Perfect for a specific area, getting started or a quick reset.",
+  },
+  {
+    image: "card-price-full-day",
+    alt: "A wooden shelving unit with baskets, jars and a trailing plant",
+    title: "Full Day",
+    when: "6–10 hours",
+    price: "£240 – £400",
+    desc: "More time for bigger projects, multiple rooms or a complete refresh.",
+  },
+  {
+    image: "card-price-staging",
+    alt: "A neatly dressed bed beside a bedside table with olive leaves",
+    title: "Property Staging",
+    when: "From",
+    price: "£160 – £450+",
+    desc: "Tailored staging to help your property look its best for sale or let.",
+  },
 ];
 
 export default function Services() {
@@ -38,6 +60,25 @@ export default function Services() {
           ))}
         </section>
 
+        <section className="qs-info-banner" aria-label="Consultation and travel policy">
+          <div>
+            <h3>Free Photo Review or £50 Assessment</h3>
+            <p>
+              Start free by sending 3–5 room photos or booking a short WhatsApp video chat. Prefer an on-site visit?
+              A 45–60 minute in-person home assessment is <strong>£50</strong>—and <strong>100% is deducted</strong>{" "}
+              from your invoice when you book a session.
+            </p>
+          </div>
+          <div>
+            <h3>Travel From Chichester</h3>
+            <p>
+              <strong>Free within 15 miles</strong> of Chichester—covering Arundel, Emsworth, Havant, Bosham, West
+              Wittering, Midhurst, Bognor Regis, and Littlehampton. Beyond 15 miles across West Sussex, Hampshire,
+              and South Surrey: <strong>45p per excess mile (one-way)</strong>.
+            </p>
+          </div>
+        </section>
+
         <section className="qs-how" aria-labelledby="how-title">
           <h2 id="how-title">How it works</h2>
           <hr className="qs-rule" />
@@ -61,9 +102,25 @@ export default function Services() {
                 </div>
               </div>
               <div className="qs-cta-row" style={{ paddingTop: 48, paddingBottom: 0 }}>
-                <Link href="/contact" className="qs-button">Book a consultation <ArrowRight size={18} /></Link>
+                <Link href="/contact/" className="qs-button">Book a consultation <ArrowRight size={18} /></Link>
               </div>
             </div>
+          </div>
+        </section>
+
+        <section className="qs-faq" aria-labelledby="faq-title">
+          <h2 id="faq-title">Frequently asked questions</h2>
+          <hr className="qs-rule" />
+          <div className="qs-faq-list">
+            {SERVICES_FAQS.map((f) => (
+              <details className="qs-faq-item" key={f.question}>
+                <summary>
+                  <span>{f.question}</span>
+                  <ChevronDown size={18} aria-hidden="true" />
+                </summary>
+                <p>{f.answer}</p>
+              </details>
+            ))}
           </div>
         </section>
       </div>

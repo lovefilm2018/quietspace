@@ -44,7 +44,7 @@ export default function Gallery() {
       <section className="gallery-outro">
         <p className="eyebrow eyebrow-light"><span /> Your space, your story</p>
         <h2>Every home is unique.<br />Every transformation begins with <em>one conversation.</em></h2>
-        <Link href="/contact" className="button-light">Book your consultation <ArrowUpRight size={17} /></Link>
+        <Link href="/contact/" className="button-light">Book your consultation <ArrowUpRight size={17} /></Link>
       </section>
     </SiteShell>
   );

@@ -1,8 +1,9 @@
 /* Quiet Space — site chrome rebuilt from the client's designs: simple linen header, olive accents, calm footer. */
-import { Menu, X, Mail, Instagram } from "lucide-react";
+import { Menu, X, Mail, Instagram, Phone } from "lucide-react";
 import { useState } from "react";
 import { Link, useLocation } from "wouter";
 import { assetUrl } from "@/lib/assets";
+import { BUSINESS_EMAIL, BUSINESS_PHONE_DISPLAY, BUSINESS_PHONE_E164 } from "@/seo/routes";
 import "@/redesign.css";
 
 const logoUrl = assetUrl("images/redesign/logo-header.webp");
@@ -11,14 +12,15 @@ const sprigRight = assetUrl("images/redesign/sprig-right.webp");
 
 const navigation = [
   { href: "/", label: "Home" },
-  { href: "/about", label: "About Me" },
-  { href: "/services", label: "Services & Prices" },
-  { href: "/contact", label: "Contact" },
+  { href: "/about/", label: "About Me" },
+  { href: "/services/", label: "Services & Prices" },
+  { href: "/contact/", label: "Contact" },
 ];
 
 function isActive(location: string, href: string) {
-  if (href === "/") return location === "/";
-  return location === href || location.startsWith(`${href}/`);
+  const normLoc = location.endsWith("/") ? location : `${location}/`;
+  if (href === "/") return normLoc === "/";
+  return normLoc === href || normLoc.startsWith(href);
 }
 
 function NavLinks({ onNavigate, className }: { onNavigate?: () => void; className: string }) {
@@ -76,10 +78,15 @@ export function SiteFooter() {
         <NavLinks className="qs-nav qs-footer-nav" />
       </div>
       <div className="qs-footer-meta">
-        <span>Based in Chichester, West Sussex — serving Sussex &amp; Hampshire</span>
-        <a href="mailto:quietspace.chichester@gmail.com"><Mail size={14} /> quietspace.chichester@gmail.com</a>
+        <span>
+          Based in Chichester — serving West Sussex,{" "}
+          <Link href="/areas/hampshire/">Hampshire</Link> &amp;{" "}
+          <Link href="/areas/south-surrey/">South Surrey</Link>
+        </span>
+        <a href={`mailto:${BUSINESS_EMAIL}`}><Mail size={14} /> {BUSINESS_EMAIL}</a>
+        <a href={`tel:${BUSINESS_PHONE_E164}`}><Phone size={14} /> {BUSINESS_PHONE_DISPLAY}</a>
         <a href="https://www.instagram.com/quietspace.organising/" target="_blank" rel="noopener noreferrer"><Instagram size={14} /> @quietspace.organising</a>
-        <Link href="/gallery">Gallery</Link>
+        <Link href="/gallery/">Gallery</Link>
         <span>© {new Date().getFullYear()} Quiet Space</span>
       </div>
     </footer>

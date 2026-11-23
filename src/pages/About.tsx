@@ -49,7 +49,7 @@ export default function About() {
                 width={1536}
                 height={1024}
               />
-              <p className="qs-about-caption">Based in Chichester, serving Sussex &amp; Hampshire</p>
+              <p className="qs-about-caption">Based in Chichester, serving West Sussex, Hampshire &amp; South Surrey</p>
             </aside>
           </div>
 
@@ -58,7 +58,7 @@ export default function About() {
 
         <section className="qs-about-cta">
           <h2>Ready to create your quiet space?</h2>
-          <Link href="/contact" className="qs-button">
+          <Link href="/contact/" className="qs-button">
             Book a consultation <ArrowRight size={18} />
           </Link>
         </section>

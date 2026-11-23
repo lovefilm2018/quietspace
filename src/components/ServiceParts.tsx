@@ -9,18 +9,26 @@ const sprigLeft = assetUrl("images/redesign/sprig-left.webp");
 const sprigRight = assetUrl("images/redesign/sprig-right.webp");
 
 const tabs = [
-  { href: "/services", label: "Pricing" },
-  { href: "/services/organising", label: "Home Organising" },
-  { href: "/services/decluttering", label: "Decluttering" },
-  { href: "/services/staging", label: "Home Staging" },
+  { href: "/services/", label: "Pricing" },
+  { href: "/services/organising/", label: "Home Organising" },
+  { href: "/services/decluttering/", label: "Decluttering" },
+  { href: "/services/staging/", label: "Home Staging" },
+  { href: "/services/move-in-unpacking/", label: "Move-In Unpacking" },
+  { href: "/services/downsizing-bereavement/", label: "Downsizing" },
 ];
 
 export function ServiceTabs() {
   const [location] = useLocation();
+  const normLoc = location.endsWith("/") ? location : `${location}/`;
   return (
     <nav className="qs-tabs" aria-label="Services">
       {tabs.map((t) => (
-        <Link key={t.href} href={t.href} className={`qs-tab ${location === t.href ? "qs-tab-active" : ""}`} aria-current={location === t.href ? "page" : undefined}>
+        <Link
+          key={t.href}
+          href={t.href}
+          className={`qs-tab ${normLoc === t.href ? "qs-tab-active" : ""}`}
+          aria-current={normLoc === t.href ? "page" : undefined}
+        >
           {t.label}
         </Link>
       ))}
@@ -48,7 +56,7 @@ export function Wordmark() {
 export function ConsultationButton() {
   return (
     <div className="qs-cta-row">
-      <Link href="/contact" className="qs-button">
+      <Link href="/contact/" className="qs-button">
         Book a consultation <ArrowRight size={18} />
       </Link>
     </div>

@@ -2,12 +2,13 @@
 import { Instagram, Mail, MapPin, MessageCircle, Phone } from "lucide-react";
 import { SiteShell } from "@/components/SiteShell";
 import { SplitHero } from "@/components/SplitHero";
+import { BUSINESS_EMAIL, BUSINESS_PHONE_DISPLAY, BUSINESS_PHONE_E164, WHATSAPP_URL } from "@/seo/routes";
 import "@/redesign.css";
 
-const EMAIL = "quietspace.chichester@gmail.com";
-const PHONE_DISPLAY = "07455 020140";
-const PHONE_TEL = "+447455020140";
-const WHATSAPP = "https://wa.me/447455020140?text=Hello%20Magda%2C%20I%27d%20like%20to%20enquire%20about%20Quiet%20Space.";
+const EMAIL = BUSINESS_EMAIL;
+const PHONE_DISPLAY = BUSINESS_PHONE_DISPLAY;
+const PHONE_TEL = BUSINESS_PHONE_E164;
+const WHATSAPP = WHATSAPP_URL;
 const INSTAGRAM = "https://www.instagram.com/quietspace.organising/";
 
 export default function Contact() {
@@ -40,7 +41,7 @@ export default function Contact() {
               </li>
               <li>
                 <span className="qs-contact-icon"><MapPin size={24} /></span>
-                <span>Location: Chichester<small>Serving West Sussex, Hampshire and South Surrey</small></span>
+                <span>Location: Chichester<small>Free travel ≤ 15 miles (45p/mile one-way beyond) across West Sussex, Hampshire &amp; South Surrey</small></span>
               </li>
               <li>
                 <span className="qs-contact-icon"><Instagram size={24} /></span>

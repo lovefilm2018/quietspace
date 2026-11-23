@@ -1,15 +1,41 @@
-/* Quiet Space — Home (client design): "Did you know?" split hero with three service tiles beneath. */
-import { ArrowRight } from "lucide-react";
+/* Quiet Space — Home (client design): split hero, trust strip, and three service tiles beneath. */
+import { ArrowRight, MessageCircle } from "lucide-react";
 import { Link } from "wouter";
 import { SiteShell } from "@/components/SiteShell";
 import { SplitHero } from "@/components/SplitHero";
 import { assetUrl } from "@/lib/assets";
+import { WHATSAPP_URL } from "@/seo/routes";
 import "@/redesign.css";
 
 const tiles = [
-  { href: "/services/decluttering", image: "tile-decluttering", alt: "Neat shelves with a plant and a woven basket", title: "Decluttering", text: "Let go of what no longer serves you." },
-  { href: "/services/organising", image: "tile-organising", alt: "A pantry shelf of labelled glass jars", title: "Home Organising", text: "Find the right place for everything." },
-  { href: "/services/staging", image: "tile-staging", alt: "A neatly dressed bed with sage and linen cushions", title: "Property Staging", text: "Prepare your home to look its best." },
+  {
+    href: "/services/decluttering/",
+    image: "tile-decluttering",
+    alt: "Organised wooden shelves with a plant and woven basket in Chichester, West Sussex",
+    title: "Decluttering",
+    text: "Let go of what no longer serves you.",
+  },
+  {
+    href: "/services/organising/",
+    image: "tile-organising",
+    alt: "Minimalist kitchen pantry shelf with labelled glass jars in West Sussex",
+    title: "Home Organising",
+    text: "Find the right place for everything.",
+  },
+  {
+    href: "/services/staging/",
+    image: "tile-staging",
+    alt: "Occupied bedroom staged with sage and linen cushions for property photography",
+    title: "Property Staging",
+    text: "Prepare your home to look its best.",
+  },
+];
+
+const trustItems = [
+  { title: "10 Years’ Experience", detail: "Private homes, holiday homes, hotels & offices" },
+  { title: "NHS-Trained Discretion", detail: "Calm, reliable & thorough (St Richard’s Hospital)" },
+  { title: "Free Travel ≤ 15 Miles", detail: "Around Chichester; 45p/mile one-way beyond" },
+  { title: "Zero-Judgement Promise", detail: "Please never tidy up before I arrive" },
 ];
 
 export default function Home() {
@@ -18,7 +44,7 @@ export default function Home() {
       <div className="qs-redesign">
         <SplitHero
           image="hero-wardrobe-empty"
-          imageAlt="Calm, sunlit bedroom and open oak wardrobe with neutral and sage clothes neatly arranged"
+          imageAlt="Calm, sunlit bedroom and open oak wardrobe with neutral and sage clothes neatly arranged in Chichester"
           imagePosition="75% 40%"
           labelledBy="home-title"
           className="qs-split-home"
@@ -33,10 +59,23 @@ export default function Home() {
             <p className="qs-home-close">Just get in touch and tell me what you need, and we’ll see how I can help.</p>
           </div>
           <div className="qs-home-actions">
-            <Link className="qs-button" href="/contact">Get in Touch <ArrowRight size={18} /></Link>
-            <Link className="qs-button qs-button-outline" href="/services">Explore Services</Link>
+            <a className="qs-button" href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
+              <MessageCircle size={18} /> Free WhatsApp Photo Review
+            </a>
+            <Link className="qs-button qs-button-outline" href="/services/">
+              Explore Services &amp; Prices <ArrowRight size={18} />
+            </Link>
           </div>
         </SplitHero>
+
+        <section className="qs-trust-strip" aria-label="Why homeowners trust Quiet Space">
+          {trustItems.map((item) => (
+            <div className="qs-trust-item" key={item.title}>
+              <strong>{item.title}</strong>
+              <span>{item.detail}</span>
+            </div>
+          ))}
+        </section>
 
         <section className="qs-tiles" aria-label="Our services">
           {tiles.map((t) => (
