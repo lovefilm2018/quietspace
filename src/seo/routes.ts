@@ -87,9 +87,9 @@ export const SEO_ROUTES: RouteSeo[] = [
   },
   {
     path: "/about/",
-    title: "About Magda (Magdalena Radzik) | Chichester Home Organiser",
+    title: "About Magdalena Radzik | Chichester Home Organiser",
     description:
-      "Meet Magdalena (Magda) Radzik of Quiet Space. 10 years' home & boutique hotel organising plus St Richard's Hospital discretion in Chichester & Sussex.",
+      "Meet Magdalena Radzik of Quiet Space. 10 years' home & boutique hotel organising plus St Richard's Hospital discretion in Chichester & Sussex.",
     ogImage: `${SITE_URL}/images/redesign/magda-kitchen-portrait.webp`,
     breadcrumbs: [
       { name: "Home", path: "/" },

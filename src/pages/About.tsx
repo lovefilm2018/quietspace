@@ -49,7 +49,7 @@ export default function About() {
                 width={1536}
                 height={1024}
               />
-              <p className="qs-about-caption">Magdalena (Magda) Radzik — Based in Chichester, serving West Sussex, Hampshire &amp; South Surrey</p>
+              <p className="qs-about-caption">Magdalena Radzik — Based in Chichester, serving West Sussex, Hampshire &amp; South Surrey</p>
             </aside>
           </div>
 
