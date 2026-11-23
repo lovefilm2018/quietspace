@@ -17,9 +17,9 @@ export default function Home() {
     <SiteShell>
       <div className="qs-redesign">
         <SplitHero
-          image="hero-wardrobe-woman"
-          imageAlt="Magda arranging neutral and sage clothes in a calm, light wardrobe"
-          imagePosition="75% 22%"
+          image="hero-wardrobe-empty"
+          imageAlt="Calm, sunlit bedroom and open oak wardrobe with neutral and sage clothes neatly arranged"
+          imagePosition="75% 40%"
           labelledBy="home-title"
           className="qs-split-home"
         >
