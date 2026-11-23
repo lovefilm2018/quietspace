@@ -38,7 +38,7 @@ export default function About() {
                 I love creating calm, functional spaces that make everyday life easier and more enjoyable. My goal is to help you feel happier in your home, with a space that truly works for you.
               </p>
 
-              <img className="qs-about-signature" src={signatureUrl} alt="Magda" width={240} height={73} />
+              <img className="qs-about-signature" src={signatureUrl} alt="Magda" width={248} height={94} />
             </div>
 
             <aside className="qs-about-aside">
