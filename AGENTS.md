@@ -23,11 +23,10 @@ If any build, test, deployment, or bugfix fails **2 consecutive times** in a ses
 - Always pass `--no-launch-browser` for CLI/OAuth web auth and print the URL to terminal.
 
 ### 3. Telegram Hub Service Reload (Seedbox Local)
-When updating `/storage/workspaces/LoveFilm/services/telegram_gateway/` (`context/*.md` or `tools/*.py`):
+When updating `/storage/workspaces/LoveFilm/services/telegram_gateway/bot.py`:
 ```bash
-cp -r /storage/workspaces/LoveFilm/services/telegram_gateway/context/* /storage/services/telegram_gateway/context/
-cp -r /storage/workspaces/LoveFilm/services/telegram_gateway/tools/* /storage/services/telegram_gateway/tools/
-pkill -f '[b]ot.py'; nohup python3 /storage/services/telegram_gateway/bot.py >/storage/services/telegram_gateway/bot.log 2>&1 </dev/null & disown
+cp /storage/workspaces/LoveFilm/services/telegram_gateway/bot.py /storage/services/telegram_gateway/bot.py
+/bin/bash /storage/services/telegram_gateway/start_bot.sh
 ```
 
 ### 4. Spoxify Deployment
