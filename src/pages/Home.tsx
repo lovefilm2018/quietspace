@@ -34,7 +34,7 @@ const tiles = [
 const trustItems = [
   { title: "10 Years’ Experience", detail: "Private homes, holiday homes, hotels & offices" },
   { title: "NHS-Trained Discretion", detail: "Calm, reliable & thorough (St Richard’s Hospital)" },
-  { title: "Free Travel ≤ 15 Miles", detail: "Around Chichester; 45p/mile one-way beyond" },
+  { title: "Sussex, Hants & Surrey", detail: "Based in Chichester; wider travel upon request" },
   { title: "Zero-Judgement Promise", detail: "Please never tidy up before I arrive" },
 ];
 

@@ -41,9 +41,9 @@ export const SERVICES_FAQS: FaqItem[] = [
       "You can start with a free WhatsApp photo or short video review. For larger projects, an in-person home assessment is £50 to measure spaces and build a tailored plan—and 100% of that £50 is deducted from your invoice when you book.",
   },
   {
-    question: "Which areas around Chichester do you cover, and what are travel charges?",
+    question: "Which areas do you cover?",
     answer:
-      "Travel is free within 15 miles of Chichester—covering Arundel, Emsworth, Havant, Bosham, West Wittering, Midhurst, Bognor Regis, and Littlehampton. Beyond 15 miles across West Sussex, Hampshire, and South Surrey, mileage is 45p per excess mile one-way.",
+      "Based in Chichester, I cover West Sussex (including Arundel, Worthing, Bognor Regis, Littlehampton, and Midhurst), Hampshire (Emsworth, Havant, Petersfield, Portsmouth, Southsea, and Fareham), and South Surrey (Haslemere, Guildford, and Farnham). Travel outside these areas is considered upon request.",
   },
   {
     question: "Will you make me throw away sentimental possessions?",
@@ -100,7 +100,7 @@ export const SEO_ROUTES: RouteSeo[] = [
     path: "/services/",
     title: "Home Organising & Staging Prices | Quiet Space Chichester",
     description:
-      "Transparent UK pricing for decluttering, home organising & property staging from £120. Free travel within 15 miles of Chichester. Book a free review.",
+      "Transparent UK pricing for decluttering, home organising & property staging from £120 across Chichester, West Sussex, Hampshire & Surrey. Book a review.",
     ogImage: `${SITE_URL}/images/redesign/card-price-full-day.webp`,
     breadcrumbs: [
       { name: "Home", path: "/" },
@@ -172,7 +172,7 @@ export const SEO_ROUTES: RouteSeo[] = [
     path: "/areas/hampshire/",
     title: "Home Organiser & Property Stager Hampshire | Quiet Space",
     description:
-      "Calm decluttering, home organising & occupied staging in Emsworth, Petersfield, Havant, Southsea & Portsmouth. Free travel within 15mi of Chichester.",
+      "Calm decluttering, home organising & occupied staging in Emsworth, Petersfield, Havant, Southsea & Portsmouth. Nearby Chichester base. Free photo review.",
     ogImage: `${SITE_URL}/images/redesign/hero-staging-room.webp`,
     breadcrumbs: [
       { name: "Home", path: "/" },

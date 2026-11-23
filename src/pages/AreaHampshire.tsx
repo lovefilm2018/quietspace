@@ -7,7 +7,7 @@ import { Wordmark, leafBulletUrl } from "@/components/ServiceParts";
 import { WHATSAPP_URL } from "@/seo/routes";
 
 const towns = [
-  "Emsworth & Hayling Island — Free travel (within 15 miles of Chichester) for coastal homes and downsizing.",
+  "Emsworth & Hayling Island — Right next door to Chichester for coastal homes and downsizing.",
   "Havant & Waterlooville — Short sessions (£120–£160) and full-day resets (£240–£400) for busy family homes.",
   "Petersfield & Liss — Pre-sale occupied property staging, move-in unpacking, and wardrobe/kitchen systems.",
   "Portsmouth, Southsea & Fareham — Calm decluttering, small-space storage solutions, and rental/Airbnb styling.",
@@ -24,7 +24,7 @@ export default function AreaHampshire() {
           labelledBy="hants-title"
         >
           <h1 id="hants-title">Home Organising &amp; Property Staging in Hampshire</h1>
-          <p className="lede">Based just across the border in Chichester—with free travel to Emsworth &amp; Havant.</p>
+          <p className="lede">Based just across the border in Chichester—serving East Hampshire &amp; the Solent coast.</p>
           <p>
             Quiet Space brings calm, non-judgemental home organising, decluttering, and affordable occupied property
             staging to homeowners across East Hampshire, including Emsworth, Havant, Petersfield, Portsmouth,
@@ -55,10 +55,10 @@ export default function AreaHampshire() {
             ))}
           </ul>
           <hr className="qs-rule qs-rule-long" />
-          <h2>Simple, transparent travel from Chichester</h2>
+          <h2>Local to Chichester, flexible across Hampshire</h2>
           <p className="qs-sheet-text">
-            Emsworth and Havant sit inside our 15-mile free travel zone. Further Hampshire towns (such as Petersfield,
-            Portsmouth, Southsea, and Fareham) are charged at just 45p per excess mile one-way.
+            Based just minutes from Emsworth and Havant, I regularly work across Petersfield, Portsmouth, Southsea,
+            and Fareham—with travel outside these areas considered upon request.
           </p>
         </section>
 

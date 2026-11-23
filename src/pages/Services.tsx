@@ -70,11 +70,11 @@ export default function Services() {
             </p>
           </div>
           <div>
-            <h3>Travel From Chichester</h3>
+            <h3>Areas Covered</h3>
             <p>
-              <strong>Free within 15 miles</strong> of Chichester—covering Arundel, Emsworth, Havant, Bosham, West
-              Wittering, Midhurst, Bognor Regis, and Littlehampton. Beyond 15 miles across West Sussex, Hampshire,
-              and South Surrey: <strong>45p per excess mile (one-way)</strong>.
+              Based in Chichester, serving West Sussex (Arundel, Worthing, Bognor Regis, Midhurst), Hampshire
+              (Emsworth, Havant, Petersfield, Portsmouth, Southsea), and South Surrey (Haslemere, Guildford, Farnham).{" "}
+              <strong>Travel outside these areas is considered upon request.</strong>
             </p>
           </div>
         </section>

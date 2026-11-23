@@ -60,7 +60,8 @@ export default function MoveInUnpacking() {
           <h2>Transparent day rates, zero hidden extras</h2>
           <p className="qs-sheet-text">
             Pre-move sorting and unpacking sessions are booked as Short Sessions (3–4 hours, £120–£160) or Full Days
-            (6–10 hours, £240–£400), with free travel within 15 miles of Chichester and 45p/mile one-way thereafter.
+            (6–10 hours, £240–£400) across Chichester, West Sussex, Hampshire, and South Surrey—with travel outside
+            these areas considered upon request.
           </p>
         </section>
 

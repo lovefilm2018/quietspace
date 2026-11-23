@@ -57,7 +57,7 @@ export default function AreaSouthSurrey() {
           <h2>Clear rates with no London-agency markups</h2>
           <p className="qs-sheet-text">
             Short Sessions (3–4 hrs) are £120–£160, Full Days (6–10 hrs) are £240–£400, and Property Staging starts
-            from £160–£450+, plus 45p/mile one-way beyond 15 miles of Chichester.
+            from £160–£450+ across Haslemere, Guildford, and Farnham—with wider travel considered upon request.
           </p>
         </section>
 

@@ -41,7 +41,7 @@ export default function Contact() {
               </li>
               <li>
                 <span className="qs-contact-icon"><MapPin size={24} /></span>
-                <span>Location: Chichester<small>Free travel ≤ 15 miles (45p/mile one-way beyond) across West Sussex, Hampshire &amp; South Surrey</small></span>
+                <span>Location: Chichester<small>Serving West Sussex, Hampshire &amp; South Surrey (wider travel upon request)</small></span>
               </li>
               <li>
                 <span className="qs-contact-icon"><Instagram size={24} /></span>
